@@ -128,3 +128,15 @@
     @apply font-mono;
   }
 }
+
+@utility group-hover-link {
+  @apply sm:dark:group-hover:bg-neutral-50 sm:dark:group-hover:text-neutral-950 dark:group-active:bg-neutral-50 dark:group-active:text-neutral-950;
+}
+
+@utility hover-link {
+  @apply active:dark:bg-neutral-50 active:dark:text-neutral-950 sm:dark:hover:bg-neutral-50 sm:dark:hover:text-neutral-950;
+}
+
+@utility active-link {
+  @apply dark:bg-neutral-50 dark:text-neutral-950;
+}
