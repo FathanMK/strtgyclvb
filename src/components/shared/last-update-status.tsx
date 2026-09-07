@@ -1,12 +1,8 @@
 import { getLatestLog } from "@/queries";
 import { formatRelativeTime } from "@/utils";
 
-export async function LastUpdateStatus({
-  typeContain,
-}: {
-  typeContain?: string;
-}) {
-  const data = await getLatestLog(typeContain);
+export async function LastUpdateStatus({ contain }: { contain?: string }) {
+  const data = await getLatestLog(contain);
 
   return (
     <div className="flex uppercase">

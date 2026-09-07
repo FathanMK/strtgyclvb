@@ -1,12 +1,8 @@
 import { getLatestLog } from "@/queries";
 import { RightElementContentRenderer } from "@/components/shared";
 
-export async function LatestChangeStatus({
-  typeContain,
-}: {
-  typeContain?: string;
-}) {
-  const data = await getLatestLog(typeContain);
+export async function LatestChangeStatus({ contain }: { contain?: string }) {
+  const data = await getLatestLog(contain);
 
   return (
     <div className="flex">

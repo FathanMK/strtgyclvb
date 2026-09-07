@@ -1,7 +1,7 @@
 import { db } from "..";
 import { logs } from "../schemas";
 
-async function systemStatus() {
+async function addSystemStatus() {
   await db.insert(logs).values({
     title: "System is Online",
     type: "system",
@@ -17,4 +17,4 @@ async function systemStatus() {
   process.exit(0);
 }
 
-await systemStatus();
+await addSystemStatus();
