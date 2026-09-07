@@ -16,3 +16,5 @@ export const logs = pgTable(
   },
   () => [readAllPublic],
 );
+
+export type LogsInsertType = typeof logs.$inferInsert;
