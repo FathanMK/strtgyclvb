@@ -2,11 +2,19 @@ import { Footer, Header } from "@/components/shared";
 import { LogsSection } from "@/features/logs/components/sections/logs";
 import { BreadcrumbItemType } from "@/types";
 
-export default function LogsPage() {
+type LogsByGameIdPageProps = {
+  params: Promise<{ gameId: string }>;
+};
+
+export default async function LogsByGameIdPage({
+  params,
+}: LogsByGameIdPageProps) {
+  const { gameId } = await params;
+
   return (
     <main className="main-container">
       <Header breadcrumbs={breadcrumbs} />
-      <LogsSection />
+      <LogsSection gameId={gameId} />
       <Footer />
     </main>
   );
