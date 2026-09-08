@@ -15,24 +15,6 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS",
   },
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "strtgyclvb",
-    },
-  ],
-  "r2_buckets": [
-    // Create a R2 binding with the binding name "NEXT_INC_CACHE_R2_BUCKET"
-    {
-      "binding": "strtgyclvb-cache",
-      "bucket_name": "strtgyclvb-cache",
-    },
-  ],
-  "images": {
-    // Enable image optimization
-    // see https://opennext.js.org/cloudflare/howtos/image
-    "binding": "IMAGES",
-  },
   "hyperdrive": [
     {
       "binding": "HYPERDRIVE",
