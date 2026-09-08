@@ -1,0 +1,15 @@
+export type MechanicsConstantsIdType =
+  | "base_hero_health"
+  | "health_per_strength"
+  | "health_regen_per_strength"
+  | "base_hero_mana"
+  | "mana_per_intelligence"
+  | "mana_regen_per_intelligence"
+  | "armor_per_agility"
+  | "armor_physical_damage_factor"
+  | "magic_resist_per_ten_intelligence"
+  | "attack_speed_per_agility"
+  | "damage_per_strength"
+  | "damage_per_agility"
+  | "damage_per_intelligence"
+  | "damage_per_universal";
