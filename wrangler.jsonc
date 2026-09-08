@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "strtgyclvb",
+  "compatibility_date": "2026-09-07",
+  "compatibility_flags": [
+    // Enable Node.js API
+    // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#nodejs-compatibility-flag
+    "nodejs_compat",
+    // Allow to fetch URLs in your app
+    // see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#global-fetch-strictly-public
+    "global_fetch_strictly_public",
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "strtgyclvb",
+    },
+  ],
+  "r2_buckets": [
+    // Create a R2 binding with the binding name "NEXT_INC_CACHE_R2_BUCKET"
+    {
+      "binding": "strtgyclvb-cache",
+      "bucket_name": "strtgyclvb-cache",
+    },
+  ],
+  "images": {
+    // Enable image optimization
+    // see https://opennext.js.org/cloudflare/howtos/image
+    "binding": "IMAGES",
+  },
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "ecbdc6c48d0c45de914276657ff0ccee",
+      "localConnectionString": "postgresql://hyperdrive-user:npg_zlCDkA1xVS9J@ep-twilight-boat-b3mx5oaq.c-4.ap-southeast-1.aws.neon.tech/neondb?sslmode=verify-full&channel_binding=require",
+    },
+  ],
+}
