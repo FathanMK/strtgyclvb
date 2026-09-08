@@ -42,4 +42,4 @@ next-env.d.ts
 .dev.vars
 .open-next
 .wrangler
-wranger.jsonc
+wrangler.jsonc
