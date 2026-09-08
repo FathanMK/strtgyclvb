@@ -1,4 +1,5 @@
-import { Footer, Header } from "@/components/shared";
+import { Footer } from "@/components/shared/footer";
+import { Header } from "@/components/shared/header";
 import Link from "next/link";
 
 export default function NotFound() {

@@ -1,4 +1,5 @@
-import { Footer, Header } from "@/components/shared";
+import { Footer } from "@/components/shared/footer";
+import { Header } from "@/components/shared/header";
 import { GamesSection } from "@/features/home/components/sections/games";
 import { StatusSection } from "@/features/home/components/sections/status";
 

@@ -1,7 +1,8 @@
-import { Footer, Header } from "@/components/shared";
+import { Footer } from "@/components/shared/footer";
+import { Header } from "@/components/shared/header";
 import { DirectoriesSection } from "@/features/dota-2/components/sections/directories";
 import { StatusSection } from "@/features/dota-2/components/sections/status";
-import { BreadcrumbItemType } from "@/types";
+import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
 
 export default function Dota2Page() {
   return (
