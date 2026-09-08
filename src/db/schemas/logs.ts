@@ -1,6 +1,6 @@
-import { ContentLogType } from "@/types";
 import { jsonb, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 import { readAllPublic } from "../policies";
+import { ContentLogType } from "@/types/content-log-type";
 
 export const logs = pgTable(
   "logs",

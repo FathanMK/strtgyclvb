@@ -1,6 +1,6 @@
-import { RightElementContentRenderer } from "@/components/shared";
-import { getLogs } from "../../queries";
 import dayjs from "dayjs";
+import { getLogs } from "../../queries/get-logs";
+import { RightElementContentRenderer } from "@/components/shared/right-element-content-renderer";
 
 export async function LogsSection({ gameId }: { gameId?: string }) {
   const data = await getLogs(gameId);

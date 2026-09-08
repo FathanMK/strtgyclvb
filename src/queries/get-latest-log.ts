@@ -1,9 +1,10 @@
-import { db } from "@/db";
+import { getDbAsync } from "@/db";
 import { logs } from "@/db/schemas";
 import { desc, ilike } from "drizzle-orm";
 import { cache } from "react";
 
 export const getLatestLog = cache(async (contain?: string) => {
+  const db = await getDbAsync();
   const where = contain
     ? ilike(logs.type, `%${contain?.toLowerCase()}%`)
     : undefined;

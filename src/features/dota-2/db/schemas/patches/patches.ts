@@ -16,5 +16,5 @@ export const dota2Patches = pgTable.withRLS(
   (t) => [readAllPublic],
 );
 
-export type Dota2PatchesInsert = typeof dota2Patches.$inferInsert;
-export type Dota2PatchesSelect = typeof dota2Patches.$inferSelect;
+export type Dota2PatchesInsertType = typeof dota2Patches.$inferInsert;
+export type Dota2PatchesSelectType = typeof dota2Patches.$inferSelect;

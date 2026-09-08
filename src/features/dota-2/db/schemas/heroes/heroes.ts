@@ -16,3 +16,5 @@ export const dota2Heroes = pgTable(
   },
   () => [readAllPublic],
 );
+
+export type Dota2HeroesInsertType = typeof dota2Heroes.$inferInsert;

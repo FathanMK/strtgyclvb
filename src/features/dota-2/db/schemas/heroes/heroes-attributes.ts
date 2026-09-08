@@ -1,7 +1,7 @@
 import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
 import { readAllPublic } from "@/db/policies";
-import { HeroesAttributesIdType } from "@/features/dota-2/types";
+import { HeroesAttributesIdType } from "@/features/dota-2/types/heroes-attributes-id-type";
 
 export const dota2HeroesAttributes = pgTable.withRLS(
   "dota_2_heroes_attributes",

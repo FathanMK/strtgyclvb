@@ -1,4 +1,5 @@
-import { LastUpdateStatus, LatestChangeStatus } from "@/components/shared";
+import { LastUpdateStatus } from "@/components/shared/last-update-status";
+import { LatestChangeStatus } from "@/components/shared/latest-change-status";
 import Link from "next/link";
 
 export function StatusSection() {

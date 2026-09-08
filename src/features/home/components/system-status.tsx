@@ -1,10 +1,10 @@
-import { getSystemStatus } from "../queries";
+import { getSystemStatus } from "../queries/get-system-status";
 
 export async function SystemStatus() {
   const data = await getSystemStatus();
 
   return (
-    <div className="flex">
+    <div className="flex sm">
       <p className="basis-1/3 shrink-0">SYSTEM</p>
       <RightElementSystemStatus value={data?.content?.at(0)?.value} />
     </div>

@@ -1,9 +1,10 @@
-import { db } from "@/db";
+import { getDbAsync } from "@/db";
 import { logs } from "@/db/schemas";
 import { desc, eq } from "drizzle-orm";
 import { cache } from "react";
 
 export const getSystemStatus = cache(async () => {
+  const db = await getDbAsync();
   const data = (
     await db
       .select()

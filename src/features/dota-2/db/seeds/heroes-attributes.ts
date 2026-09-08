@@ -3,10 +3,11 @@ import {
   dota2HeroesAttributes,
   Dota2HeroesAttributesInsertType,
 } from "../schemas/heroes/heroes-attributes";
-import { db } from "@/db";
+import { getDbAsync } from "@/db";
 
 async function heroesAttributes() {
-  const addHeroesAttributes: Dota2HeroesAttributesInsertType[] = [
+  const db = await getDbAsync();
+  const heroesAttributes: Dota2HeroesAttributesInsertType[] = [
     {
       attributeId: "primary_attribute",
       name: "Primary Attribute",
@@ -225,7 +226,7 @@ async function heroesAttributes() {
     },
   ];
 
-  const logsAddHeroesAttributes: LogsInsertType[] = [
+  const logsHeroesAttributes: LogsInsertType[] = [
     {
       title: "Added Dota 2 heroes attributes",
       type: "dota-2",
@@ -235,12 +236,12 @@ async function heroesAttributes() {
           value: "Add",
         },
         {
-          href: "/games/dota-2",
+          href: "/dota-2",
           type: "link",
           value: "Dota 2",
         },
         {
-          href: "/games/dota-2/heroes-attributes",
+          href: "/dota-2/heroes-attributes",
           type: "link",
           value: "Heroes Attributes",
         },
@@ -248,11 +249,11 @@ async function heroesAttributes() {
     },
   ];
 
-  await db.insert(dota2HeroesAttributes).values(addHeroesAttributes);
-  await db.insert(logs).values(logsAddHeroesAttributes);
+  await db.insert(dota2HeroesAttributes).values(heroesAttributes);
+  await db.insert(logs).values(logsHeroesAttributes);
 
   console.log("ADD DOTA 2 HEROES ATTRIBUTES");
   process.exit(0);
 }
 
-heroesAttributes();
+await heroesAttributes();

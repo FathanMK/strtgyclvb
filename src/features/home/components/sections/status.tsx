@@ -1,6 +1,7 @@
-import { LastUpdateStatus, LatestChangeStatus } from "@/components/shared";
+import { LatestChangeStatus } from "@/components/shared/latest-change-status";
 import { SystemStatus } from "../system-status";
 import Link from "next/link";
+import { LastUpdateStatus } from "@/components/shared/last-update-status";
 
 export async function StatusSection() {
   return (

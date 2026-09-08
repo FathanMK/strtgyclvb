@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { getDbAsync } from "@/db";
 import {
   dota2HeroesAttributesValue,
   Dota2HeroesAttributesValueInsertType,
@@ -7,7 +7,8 @@ import {
 } from "@/db/schemas";
 
 async function abaddonHeroesAttributes() {
-  const addAbaddonAttributes: Dota2HeroesAttributesValueInsertType[] = [
+  const db = await getDbAsync();
+  const abaddonAttributes: Dota2HeroesAttributesValueInsertType[] = [
     {
       patchId: "7.41e",
       heroId: "abaddon",
@@ -199,22 +200,22 @@ async function abaddonHeroesAttributes() {
     },
   ];
 
-  const logsAddAbaddonAttributes: LogsInsertType[] = [
+  const logsAbaddonAttributes: LogsInsertType[] = [
     {
       title: "Added Dota 2 Abaddon attributes value",
-      type: "dota-2-heroes",
+      type: "dota-2",
       content: [
         {
           type: "text",
           value: "Add",
         },
         {
-          href: "/games/dota-2",
+          href: "/dota-2",
           type: "link",
           value: "Dota 2",
         },
         {
-          href: "/games/dota-2/heroes/abaddon/attributes",
+          href: "/dota-2/heroes/abaddon/attributes",
           type: "link",
           value: "ABADDON ATTRIBUTES",
         },
@@ -226,11 +227,11 @@ async function abaddonHeroesAttributes() {
     },
   ];
 
-  await db.insert(dota2HeroesAttributesValue).values(addAbaddonAttributes);
-  await db.insert(logs).values(logsAddAbaddonAttributes);
+  await db.insert(dota2HeroesAttributesValue).values(abaddonAttributes);
+  await db.insert(logs).values(logsAbaddonAttributes);
 
   console.log("ADD ABADDON HEROES ATTRIBUTES");
   process.exit(0);
 }
 
-abaddonHeroesAttributes();
+await abaddonHeroesAttributes();
