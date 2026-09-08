@@ -1,5 +1,5 @@
-import { getLatestLog } from "@/queries";
-import { formatRelativeTime } from "@/utils";
+import { getLatestLog } from "@/queries/get-latest-log";
+import { formatRelativeTime } from "@/utils/format-relative-time";
 
 export async function LastUpdateStatus({ contain }: { contain?: string }) {
   const data = await getLatestLog(contain);

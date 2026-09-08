@@ -1,4 +1,3 @@
-import { BreadcrumbItemType } from "@/types";
 import Link from "next/link";
 import {
   Breadcrumb,
@@ -17,6 +16,7 @@ import {
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { Fragment } from "react/jsx-runtime";
+import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
 
 type HeaderProps = {
   breadcrumbs?: BreadcrumbItemType[];
@@ -57,22 +57,22 @@ export function Header({ breadcrumbs }: HeaderProps) {
                     render={
                       <Button
                         variant="ghost"
-                        className="cursor-pointer h-auto transition-none text-base p-0 border-none font-bold"
+                        className="cursor-pointer h-auto transition-none text-base p-0 border-none font-bold dark:hover:bg-neutral-50 dark:hover:text-neutral-950 dark:aria-expanded:bg-neutral-50 dark:aria-expanded:text-neutral-950"
                       >
                         [...]
                       </Button>
                     }
                   />
-                  <DropdownMenuContent align="start">
+                  <DropdownMenuContent className="min-w-0 w-fit" align="start">
                     <DropdownMenuGroup>
                       {inbetween.map((item) => (
                         <DropdownMenuItem
                           key={item.id}
-                          className="text-sm not-data-[variant=destructive]:focus:**:text-"
+                          className="text-sm not-data-[variant=destructive]:focus:**:text- focus:bg- shrink-0"
                         >
                           <Link
                             href={item.href ?? "#"}
-                            className="hover-link uppercase font-bold"
+                            className="hover-link uppercase font-bold shrink-0"
                           >
                             [{item.value}]
                           </Link>

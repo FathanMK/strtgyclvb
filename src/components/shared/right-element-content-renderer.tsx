@@ -1,4 +1,4 @@
-import { ContentLogType } from "@/types";
+import { ContentLogType } from "@/types/content-log-type";
 import Link from "next/link";
 
 export function RightElementContentRenderer({

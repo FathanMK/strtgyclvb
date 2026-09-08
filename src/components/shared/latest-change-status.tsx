@@ -1,5 +1,5 @@
-import { getLatestLog } from "@/queries";
-import { RightElementContentRenderer } from "@/components/shared";
+import { getLatestLog } from "@/queries/get-latest-log";
+import { RightElementContentRenderer } from "./right-element-content-renderer";
 
 export async function LatestChangeStatus({ contain }: { contain?: string }) {
   const data = await getLatestLog(contain);
