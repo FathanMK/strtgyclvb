@@ -42,7 +42,7 @@ export function TimeBetweenAttacksPopover() {
         <p>{formattedTimeBetweenAttacks}s</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-82">
+      <PopoverContent align="start" className="text-sm gap-6 w-82">
         <div>
           <div>
             <LinkedText id="attackRate" active={active} setActive={setActive}>

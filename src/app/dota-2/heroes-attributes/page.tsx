@@ -1,21 +1,13 @@
 import { Footer } from "@/components/shared/footer";
 import { Header } from "@/components/shared/header";
-import { LogsSection } from "@/features/logs/components/sections/logs";
+import { HeroesAttributesSection } from "@/features/dota-2/components/sections/heroes-attributes";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
 
-type LogsByGameIdPageProps = {
-  params: Promise<{ gameId: string }>;
-};
-
-export default async function LogsByGameIdPage({
-  params,
-}: LogsByGameIdPageProps) {
-  const { gameId } = await params;
-
+export default function Dota2HeroesAttributesPage() {
   return (
     <main className="main-container">
       <Header breadcrumbs={breadcrumbs} />
-      <LogsSection gameId={gameId} />
+      <HeroesAttributesSection />
       <Footer />
     </main>
   );
@@ -29,8 +21,14 @@ const breadcrumbs: BreadcrumbItemType[] = [
     value: "HOME",
   },
   {
-    id: "logs",
+    id: "dota-2",
+    type: "link",
+    href: "/dota-2",
+    value: "DOTA 2",
+  },
+  {
+    id: "heroes",
     type: "text",
-    value: "LOGS",
+    value: "HEROES ATTRIBUTES",
   },
 ];

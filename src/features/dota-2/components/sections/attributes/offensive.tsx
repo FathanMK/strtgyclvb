@@ -9,8 +9,8 @@ import { AttackAnimationPopover } from "./popovers/attack-animation";
 export function OffensiveAttributesSection() {
   const { attributes } = useAttributesContext();
   return (
-    <div className="space-y-3 uppercase">
-      <h2>OFFENSIVE</h2>
+    <div className="space-y-3">
+      <h2 className="font-bold">OFFENSIVE</h2>
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">ATTACK DAMAGE</p>

@@ -10,11 +10,11 @@ export async function HeroesSection() {
     );
 
   return (
-    <section className="m-6 space-y-6 uppercase">
+    <section className="m-6 space-y-6">
       {sortedHeroesByAttributes.map((item, index) => (
         <div key={index} className="space-y-2">
-          <h2 className="uppercase font-bold text-lg">{item[0]}</h2>
-          <div className="flex flex-wrap gap-x-6 gap-y-11">
+          <h2 className="font-bold text-lg">{item[0]}</h2>
+          <div>
             {item[1]?.map((hero, index) => (
               <div key={hero.heroId} className="flex items-center gap-2">
                 <p>{index?.toString().padStart(2, "0")}</p>

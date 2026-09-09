@@ -7,8 +7,8 @@ import { GainUniversalPopover } from "./popovers/gain-universal";
 export function StatsAttributesSection() {
   const { attributes } = useAttributesContext();
   return (
-    <div className="space-y-3 uppercase">
-      <h2>STATS</h2>
+    <div className="space-y-3">
+      <h2 className="font-bold">STATS</h2>
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">BASE STRENGTH</p>

@@ -29,7 +29,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
 
   return (
     <header className="m-6 flex flex-col gap-6">
-      <Link href="/" className="hover-link uppercase font-bold text-lg w-fit">
+      <Link href="/" className="hover-link font-bold text-lg w-fit">
         [STRTGYCLVB]
       </Link>
       {breadcrumbs && (
@@ -42,7 +42,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                   render={
                     <Link
                       href={first.href ?? "#"}
-                      className="hover-link uppercase font-bold"
+                      className="hover-link font-bold"
                     >
                       [{first.value}]
                     </Link>
@@ -71,7 +71,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                           <DropdownMenuItem className="text-sm not-data-[variant=destructive]:focus:**:text- focus:bg- shrink-0">
                             <Link
                               href={item.href ?? "#"}
-                              className="hover-link uppercase font-bold shrink-0"
+                              className="hover-link font-bold shrink-0"
                             >
                               [{item.value}]
                             </Link>
@@ -93,7 +93,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                 render={
                   <Link
                     href={last.href ?? "#"}
-                    className="active-link uppercase font-bold"
+                    className="active-link font-bold"
                   >
                     [{last.value}]
                   </Link>
@@ -110,14 +110,14 @@ export function Header({ breadcrumbs }: HeaderProps) {
                         render={
                           <Link
                             href={bc.href ?? ""}
-                            className="hover-link uppercase font-bold"
+                            className="hover-link font-bold"
                           >
                             [{bc.value}]
                           </Link>
                         }
                       />
                     ) : (
-                      <BreadcrumbPage className="active-link uppercase font-bold">
+                      <BreadcrumbPage className="active-link font-bold">
                         [{bc.value}]
                       </BreadcrumbPage>
                     )}

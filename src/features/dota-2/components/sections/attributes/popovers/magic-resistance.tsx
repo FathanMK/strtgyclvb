@@ -33,7 +33,7 @@ export function MagicResistancePopover() {
         <p>{formattedMagicRes}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-103">
+      <PopoverContent align="start" className="text-sm gap-6 w-103">
         <div>
           <LinkedText id="formatMagicRes" active={active} setActive={setActive}>
             {formattedMagicRes}

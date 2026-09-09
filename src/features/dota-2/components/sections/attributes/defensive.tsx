@@ -6,8 +6,8 @@ import { PhysicalResistancePopover } from "./popovers/physical-resistance";
 
 export function DefensiveAttributesSection() {
   return (
-    <div className="space-y-3 uppercase">
-      <h2>DEFENSIVE</h2>
+    <div className="space-y-3">
+      <h2 className="font-bold">DEFENSIVE</h2>
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">ARMOR</p>

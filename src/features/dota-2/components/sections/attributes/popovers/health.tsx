@@ -32,7 +32,7 @@ export function HealthPopover() {
         <p>{formattedHealth}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6">
+      <PopoverContent align="start" className="text-sm gap-6">
         <div>
           <LinkedText id="health" active={active} setActive={setActive}>
             {formattedHealth}

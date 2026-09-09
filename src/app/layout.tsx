@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={cn(
-        "antialiased font-mono dark dark:bg-neutral-950 dark:text-neutral-50",
+        "antialiased font-mono dark dark:bg-neutral-950 dark:text-neutral-50 uppercase",
         jetbrainsMono.variable,
       )}
     >

@@ -32,7 +32,7 @@ export function AttackSpeedPopover() {
         <p>{formattedAttackSpeed}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-82">
+      <PopoverContent align="start" className="text-sm gap-6 w-82">
         <div>
           <LinkedText id="attackSpeed" active={active} setActive={setActive}>
             {formattedAttackSpeed}

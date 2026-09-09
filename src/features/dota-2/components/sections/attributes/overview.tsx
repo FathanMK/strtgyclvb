@@ -11,7 +11,7 @@ export function OverviewAttributesSection() {
   );
 
   return (
-    <div className="space-y-3 uppercase">
+    <div className="space-y-3">
       <h2 className="font-bold">OVERVIEW</h2>
       <div>
         <div className="flex">

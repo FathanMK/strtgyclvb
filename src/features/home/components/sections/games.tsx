@@ -4,7 +4,7 @@ export async function GamesSection() {
   return (
     <section className="m-6 space-y-2">
       <h2 className="font-bold text-lg">GAMES</h2>
-      <div className="flex flex-wrap gap-x-6 gap-y-1 uppercase">
+      <div>
         {games.map((game) => (
           <Link
             key={game.id}

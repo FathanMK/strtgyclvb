@@ -8,7 +8,7 @@ export async function HeroDetailSection({ heroId }: { heroId: string }) {
   // const heroAbilitiesName = await getHeroAbilitiesName(heroId);
 
   return (
-    <section className="m-6 space-y-6 uppercase">
+    <section className="m-6 space-y-6">
       <Image
         alt={hero.name + "potrait"}
         src={`dota-2/heroes/${hero.heroId}/potrait.webp`}

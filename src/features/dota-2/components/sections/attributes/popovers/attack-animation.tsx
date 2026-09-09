@@ -25,7 +25,7 @@ export function AttackAnimationPopover() {
         </p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-fit">
+      <PopoverContent align="start" className="text-sm gap-6 w-fit">
         <div>
           <LinkedText id="foreswing" active={active} setActive={setActive}>
             {base_attack_animation_foreswing.value}

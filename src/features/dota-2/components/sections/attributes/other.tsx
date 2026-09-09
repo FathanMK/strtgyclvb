@@ -6,8 +6,8 @@ export function OtherAttributesSection() {
   const { attributes } = useAttributesContext();
 
   return (
-    <div className="space-y-3 uppercase">
-      <h2>OTHER</h2>
+    <div className="space-y-3">
+      <h2 className="font-bold">OTHER</h2>
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">MOVEMENT SPEED</p>

@@ -1,6 +1,7 @@
 import { getDbAsync } from "@/db";
+import { cache } from "react";
 
-export async function getHeroes() {
+export const getHeroes = cache(async () => {
   const db = await getDbAsync();
   const data = await db.query.dota2HeroesAttributesValue.findMany({
     where: {
@@ -11,4 +12,4 @@ export async function getHeroes() {
     },
   });
   return data;
-}
+});

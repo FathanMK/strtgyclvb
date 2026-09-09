@@ -40,7 +40,7 @@ export function PhysicalResistancePopover() {
         <p>{formattedPhysicalRes}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-92">
+      <PopoverContent align="start" className="text-sm gap-6 w-92">
         <div>
           <LinkedText
             id="formatPhysicalRes"

@@ -28,7 +28,7 @@ export function AttackDamagePopover() {
         </p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-82">
+      <PopoverContent align="start" className="text-sm gap-6 w-82">
         <div>
           <div>
             <LinkedText

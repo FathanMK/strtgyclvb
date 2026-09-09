@@ -31,7 +31,7 @@ export function BaseUniversalPopover() {
         <p>{formattedBaseUniversal}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6">
+      <PopoverContent align="start" className="text-sm gap-6">
         <div>
           <LinkedText id="baseUniversal" active={active} setActive={setActive}>
             {formattedBaseUniversal}

@@ -19,10 +19,10 @@ export function HeroDetailNav({
   //   .replace(/\s/g, "-");
 
   return (
-    <div className="flex flex-wrap gap-x-6 gap-y-1">
+    <div className="flex gap-x-6 overflow-x-scroll">
       <Link
         className={cn(
-          "hover-link font-bold",
+          "hover-link font-bold shrink-0",
           url.includes("attributes") && "active-link",
         )}
         href={`/dota-2/heroes/${heroId}/attributes`}

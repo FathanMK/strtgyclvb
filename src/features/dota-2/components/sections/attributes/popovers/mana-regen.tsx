@@ -32,7 +32,7 @@ export function ManaRegenPopover() {
         <p>{formattedManaRegen}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6 w-80">
+      <PopoverContent align="start" className="text-sm gap-6 w-80">
         <div>
           <LinkedText id="manaRegen" active={active} setActive={setActive}>
             {formattedManaRegen}

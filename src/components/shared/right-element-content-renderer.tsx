@@ -8,13 +8,10 @@ export function RightElementContentRenderer({
 }) {
   switch (content.type) {
     case "text":
-      return <p className="uppercase">{content.value ?? "UNKNOWN"}</p>;
+      return <p>{content.value ?? "UNKNOWN"}</p>;
     case "link":
       return (
-        <Link
-          href={content.href ?? "#"}
-          className="hover-link uppercase font-bold"
-        >
+        <Link href={content.href ?? "#"} className="hover-link font-bold">
           [{content.value}]
         </Link>
       );

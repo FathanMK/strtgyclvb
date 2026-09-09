@@ -2,8 +2,8 @@ import dayjs from "dayjs";
 import { getLogs } from "../../queries/get-logs";
 import { RightElementContentRenderer } from "@/components/shared/right-element-content-renderer";
 
-export async function LogsSection({ gameId }: { gameId?: string }) {
-  const data = await getLogs(gameId);
+export async function LogsSection() {
+  const data = await getLogs();
   const sortedLogsByCreatedAt =
     data &&
     Object.entries(
@@ -15,14 +15,14 @@ export async function LogsSection({ gameId }: { gameId?: string }) {
     <section className="m-6 space-y-6">
       {sortedLogsByCreatedAt.map((item, index) => (
         <div key={index} className="space-y-2">
-          <h2 className="uppercase font-bold">{item[0]}</h2>
+          <h2 className="font-bold">{item[0]}</h2>
           <div>
             {item[1]?.map((log) => (
               <div key={log.id} className="flex items-start gap-4">
-                <p className="basis-1/6">
+                <p className="basis-1/7">
                   {dayjs(log.createdAt).format("HH:MM:ss")}
                 </p>
-                <div className="flex flex-wrap items-center gap-x-2">
+                <div className="flex flex-wrap items-center gap-2">
                   {log.content?.map((content, index) => (
                     <RightElementContentRenderer
                       key={index}

@@ -4,7 +4,7 @@ export default function ErrorPage() {
   return (
     <main className="flex flex-col h-screen main-container">
       <section className="p-4 flex gap-1">
-        <a href="/" className="hover-link uppercase font-bold">
+        <a href="/" className="hover-link font-bold">
           [STRTGYCLVB]
         </a>
       </section>
