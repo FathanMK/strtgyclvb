@@ -1,6 +1,9 @@
 "use client";
 
 import { HealthPopover } from "./popovers/health";
+import { HealthRegenPopover } from "./popovers/health-regen";
+import { ManaPopover } from "./popovers/mana";
+import { ManaRegenPopover } from "./popovers/mana-regen";
 
 export function RegenerationAttributesSection() {
   return (
@@ -11,7 +14,7 @@ export function RegenerationAttributesSection() {
           <p className="basis-1/2 shrink-0">HEALTH</p>
           <HealthPopover />
         </div>
-        {/* <div className="flex">
+        <div className="flex">
           <p className="basis-1/2 shrink-0">HEALTH REGENERATION</p>
           <HealthRegenPopover />
         </div>
@@ -22,7 +25,7 @@ export function RegenerationAttributesSection() {
         <div className="flex">
           <p className="basis-1/2 shrink-0">MANA REGENERATION</p>
           <ManaRegenPopover />
-        </div> */}
+        </div>
       </div>
     </div>
   );

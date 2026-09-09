@@ -17,6 +17,7 @@ import {
 import { Button } from "../ui/button";
 import { Fragment } from "react/jsx-runtime";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
+import { ChevronRight } from "lucide-react";
 
 type HeaderProps = {
   breadcrumbs?: BreadcrumbItemType[];
@@ -64,19 +65,21 @@ export function Header({ breadcrumbs }: HeaderProps) {
                     }
                   />
                   <DropdownMenuContent className="min-w-0 w-fit" align="start">
-                    <DropdownMenuGroup>
-                      {inbetween.map((item) => (
-                        <DropdownMenuItem
-                          key={item.id}
-                          className="text-sm not-data-[variant=destructive]:focus:**:text- focus:bg- shrink-0"
-                        >
-                          <Link
-                            href={item.href ?? "#"}
-                            className="hover-link uppercase font-bold shrink-0"
-                          >
-                            [{item.value}]
-                          </Link>
-                        </DropdownMenuItem>
+                    <DropdownMenuGroup className="flex items-center">
+                      {inbetween.map((item, index) => (
+                        <Fragment key={item.id}>
+                          <DropdownMenuItem className="text-sm not-data-[variant=destructive]:focus:**:text- focus:bg- shrink-0">
+                            <Link
+                              href={item.href ?? "#"}
+                              className="hover-link uppercase font-bold shrink-0"
+                            >
+                              [{item.value}]
+                            </Link>
+                          </DropdownMenuItem>
+                          {index + 1 !== inbetween.length && (
+                            <ChevronRight className="size-3.5" />
+                          )}
+                        </Fragment>
                       ))}
                     </DropdownMenuGroup>
                   </DropdownMenuContent>
