@@ -233,7 +233,7 @@ async function heroesAttributes() {
       content: [
         {
           type: "text",
-          value: "Add",
+          value: "Added",
         },
         {
           href: "/dota-2",

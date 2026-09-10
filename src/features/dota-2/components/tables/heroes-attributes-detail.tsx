@@ -18,14 +18,12 @@ import {
   useTable,
   createSortedRowModel,
   rowSortingFeature,
-  sortFn_text,
   SortingState,
   sortFn_alphanumeric,
 } from "@tanstack/react-table";
-import { ArrowDown, ArrowUp } from "lucide-react";
 import { useState } from "react";
 
-export type HeroesDetailAttributesTableType = {
+export type HeroesAttributesDetailTableType = {
   name: string | null | undefined;
   value: string | null;
 };
@@ -46,7 +44,7 @@ const features = tableFeatures({
 });
 const columnHelper = createColumnHelper<
   DataTableFeaturesType,
-  HeroesDetailAttributesTableType
+  HeroesAttributesDetailTableType
 >();
 
 export const columns = columnHelper.columns([
@@ -58,7 +56,7 @@ export const columns = columnHelper.columns([
       return (
         <Button
           variant="ghost"
-          className="h-auto p-0 active:not-aria-[haspopup]:translate-y-0 dark:hover:bg-neutral-50 dark:hover:text-neutral-950 text-base font-black cursor-pointer"
+          className="h-auto p-0 transition-none dark:hover:bg-neutral-50 dark:hover:text-neutral-950 text-base font-black cursor-pointer"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           [VALUE {column.getIsSorted() === "asc" ? "↑" : "↓"}]
@@ -71,7 +69,7 @@ export const columns = columnHelper.columns([
   }),
 ]);
 
-export function HeroesDetailAttributesTable<TData extends RowData>({
+export function HeroesAttributesDetailTable<TData extends RowData>({
   columns,
   data,
 }: DataTablePropsType<TData>) {

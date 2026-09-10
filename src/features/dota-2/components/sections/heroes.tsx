@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { getHeroes } from "../../queries/get-heroes";
 import { Separator } from "@/components/ui/separator";
+import { getHeroesByAttribute } from "../../queries/get-heroes-by-attribute";
 
 export async function HeroesSection() {
-  const data = await getHeroes();
+  const data = await getHeroesByAttribute("primary_attribute");
   const sortedHeroesByAttributes =
     data &&
     Object.entries(

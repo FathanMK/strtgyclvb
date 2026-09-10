@@ -17,12 +17,12 @@ async function heroes() {
 
   const logsHeroes: LogsInsertType[] = [
     {
-      title: "Add Dota 2 hero Abaddon",
+      title: "Added Dota 2 hero Abaddon",
       type: "dota-2",
       content: [
         {
           type: "text",
-          value: "ADD",
+          value: "ADDED",
         },
         {
           href: "/dota-2",

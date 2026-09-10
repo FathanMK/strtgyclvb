@@ -1,16 +1,16 @@
 import { Footer } from "@/components/shared/footer";
 import { Header } from "@/components/shared/header";
-import { HeroesAttributesDetailSection } from "@/features/dota-2/components/sections/heroes-attributes-detail";
+import { MechanicsFormulasDetailSection } from "@/features/dota-2/components/sections/mechanics-formulas-detail";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
 
-type HeroesAttributesDetailPageProps = {
-  params: Promise<{ attributeId: string }>;
+type MechanicsFormulasDetailPageProps = {
+  params: Promise<{ mechanicFormulaId: string }>;
 };
 
-export default async function HeroesAttributesDetailPage({
+export default async function MechanicsFormulasDetailPage({
   params,
-}: HeroesAttributesDetailPageProps) {
-  const { attributeId } = await params;
+}: MechanicsFormulasDetailPageProps) {
+  const { mechanicFormulaId } = await params;
 
   const breadcrumbs: BreadcrumbItemType[] = [
     {
@@ -28,20 +28,20 @@ export default async function HeroesAttributesDetailPage({
     {
       id: "heroes",
       type: "link",
-      href: "/dota-2/heroes-attributes",
-      value: "HEROES ATTRIBUTES",
+      href: "/dota-2/mechanics-formulas",
+      value: "MECHANICS FORMULAS",
     },
     {
-      id: attributeId,
+      id: mechanicFormulaId,
       type: "text",
-      value: attributeId.replace(/\-/g, " "),
+      value: mechanicFormulaId.replace(/\-/g, " "),
     },
   ];
 
   return (
     <main className="main-container">
       <Header breadcrumbs={breadcrumbs} />
-      <HeroesAttributesDetailSection attributeId={attributeId} />
+      <MechanicsFormulasDetailSection mechanicFormulaId={mechanicFormulaId} />
       <Footer />
     </main>
   );

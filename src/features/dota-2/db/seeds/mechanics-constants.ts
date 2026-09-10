@@ -1,13 +1,13 @@
 import { logs, LogsInsertType } from "@/db/schemas";
 import {
   dota2MechanicsConstants,
-  Dota2MechanicsConstantsInsert,
+  Dota2MechanicsConstantsInsertType,
 } from "../schemas";
 import { getDbAsync } from "@/db";
 
 async function mechanicsConstants() {
   const db = await getDbAsync();
-  const mechanicsConstants: Dota2MechanicsConstantsInsert[] = [
+  const mechanicsConstants: Dota2MechanicsConstantsInsertType[] = [
     {
       mechanicConstantId: "base_hero_health",
       name: "Base Hero Health",
@@ -129,7 +129,7 @@ async function mechanicsConstants() {
       content: [
         {
           type: "text",
-          value: "Add",
+          value: "Added",
         },
         {
           href: "/games/dota-2",
@@ -137,9 +137,9 @@ async function mechanicsConstants() {
           value: "Dota 2",
         },
         {
-          href: "/games/dota-2/mechanic-constants-attributes",
+          href: "/games/dota-2/mechanic-constants",
           type: "link",
-          value: "mechanic constants attributes",
+          value: "mechanic constants",
         },
       ],
     },

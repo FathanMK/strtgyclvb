@@ -207,7 +207,7 @@ async function abaddonHeroesAttributes() {
       content: [
         {
           type: "text",
-          value: "Add",
+          value: "Added",
         },
         {
           href: "/dota-2",

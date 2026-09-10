@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 
-export function HeroesDetailAttributesStats() {
+export function HeroesAttributesDetailStats() {
   return (
     <div>
       <h2>STATS</h2>

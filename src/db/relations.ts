@@ -16,6 +16,19 @@ const relations = defineRelations(schemas, (r) => ({
       to: r.dota2HeroesAttributes.attributeId,
     }),
   },
+  dota2MechanicsConstants: {
+    formulas: r.many.dota2MechanicsFormulas({
+      from: r.dota2MechanicsConstants.mechanicConstantId.through(
+        r.dota2MechanicsConstantsToFormulas.mechanicConstantId,
+      ),
+      to: r.dota2MechanicsFormulas.mechanicFormulaId.through(
+        r.dota2MechanicsConstantsToFormulas.mechanicFormulaId,
+      ),
+    }),
+  },
+  dota2MechanicsFormulas: {
+    constants: r.many.dota2MechanicsConstants(),
+  },
 }));
 
 export default relations;

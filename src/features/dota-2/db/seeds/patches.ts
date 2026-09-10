@@ -14,12 +14,12 @@ async function patches() {
 
   const logsPatches: LogsInsertType[] = [
     {
-      title: "Add Dota 2 7.41e patch",
+      title: "Added Dota 2 7.41e patch",
       type: "dota-2",
       content: [
         {
           type: "text",
-          value: "ADD",
+          value: "ADDED",
         },
         {
           href: "/dota-2",

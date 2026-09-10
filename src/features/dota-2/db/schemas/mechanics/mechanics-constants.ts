@@ -21,7 +21,7 @@ export const dota2MechanicsConstants = pgTable.withRLS(
   () => [readAllPublic],
 );
 
-export type Dota2MechanicsConstantsInsert =
+export type Dota2MechanicsConstantsInsertType =
   typeof dota2MechanicsConstants.$inferInsert;
-export type Dota2MechanicsConstantsSelect =
+export type Dota2MechanicsConstantsSelectType =
   typeof dota2MechanicsConstants.$inferSelect;

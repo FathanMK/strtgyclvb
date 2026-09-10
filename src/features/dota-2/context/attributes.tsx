@@ -26,6 +26,7 @@ export function AttributesProvider({
 }: AttributesProviderType) {
   const heroData = use(hero);
   const mechanicConstantsData = use(mechanicConstants);
+
   return (
     <AttributesContext.Provider
       value={{

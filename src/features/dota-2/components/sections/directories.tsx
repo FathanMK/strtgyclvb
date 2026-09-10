@@ -30,4 +30,12 @@ const directories = [
     id: "heroes-attributes",
     name: "HEROES ATTRIBUTES",
   },
+  {
+    id: "mechanics-constants",
+    name: "MECHANICS CONSTANTS",
+  },
+  {
+    id: "mechanics-formulas",
+    name: "MECHANICS FORMULAS",
+  },
 ];
