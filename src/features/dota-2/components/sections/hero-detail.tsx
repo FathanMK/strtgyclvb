@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HeroDetailNav } from "../nav/hero-detail";
 import { getHero } from "../../queries/get-hero";
+import { Separator } from "@/components/ui/separator";
 // import { getHeroAbilitiesName } from "../queries/get-hero-abilities-name";
 
 export async function HeroDetailSection({ heroId }: { heroId: string }) {
@@ -15,12 +16,10 @@ export async function HeroDetailSection({ heroId }: { heroId: string }) {
         width={120}
         height={120}
       />
-      <div className="flex items-start gap-2">
-        <p>00</p>
-        <div>
-          <h1 className="font-bold">{hero.name}</h1>
-          <p className="text-xs text-neutral-500">{hero.fullName}</p>
-        </div>
+      <div>
+        <h1 className="font-black">{hero.name}</h1>
+        <Separator className="my-1" />
+        <p className="text-xs text-neutral-500">{hero.fullName}</p>
       </div>
       <div>
         {hero.descriptions?.map((desc, index) => (

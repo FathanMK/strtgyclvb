@@ -5,12 +5,14 @@ import { AttackDamagePopover } from "./popovers/attack-damage";
 import { AttackSpeedPopover } from "./popovers/attack-speed";
 import { TimeBetweenAttacksPopover } from "./popovers/time-between-attacks";
 import { AttackAnimationPopover } from "./popovers/attack-animation";
+import { Separator } from "@/components/ui/separator";
 
 export function OffensiveAttributesSection() {
   const { attributes } = useAttributesContext();
   return (
-    <div className="space-y-3">
-      <h2 className="font-bold">OFFENSIVE</h2>
+    <div>
+      <h2>OFFENSIVE</h2>
+      <Separator className="my-1" />
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">ATTACK DAMAGE</p>

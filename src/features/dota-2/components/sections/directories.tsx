@@ -1,18 +1,19 @@
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 export function DirectoriesSection() {
   return (
-    <section className="m-6 space-y-2">
-      <h2 className="font-bold text-lg">DIRECTORIES</h2>
+    <section className="m-6">
+      <h2>DIRECTORIES</h2>
+      <Separator className="my-1" />
       <div>
-        {directories.map((item, index) => (
+        {directories.map((item) => (
           <Link
             key={item.id}
             href={`/dota-2/${item.id}`}
-            className="group flex items-center gap-2"
+            className="group flex items-center gap-2 w-fit"
           >
-            <p>{index?.toString().padStart(2, "0")}</p>
-            <div className="group-hover-link font-bold">[{item.name}]</div>
+            <div className="group-hover-link font-black">[{item.name}]</div>
           </Link>
         ))}
       </div>

@@ -1,17 +1,18 @@
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 export async function GamesSection() {
   return (
-    <section className="m-6 space-y-2">
-      <h2 className="font-bold text-lg">GAMES</h2>
+    <section className="m-6">
+      <h2>GAMES</h2>
+      <Separator className="my-1" />
       <div>
         {games.map((game) => (
           <Link
             key={game.id}
-            className="group flex items-center gap-2"
+            className="group flex items-center gap-2 w-fit"
             href={`/${game.gameId}`}
           >
-            <p>{game.id?.toString().padStart(2, "0")}</p>
             <p className="group-hover-link font-bold">[{game.name}]</p>
           </Link>
         ))}

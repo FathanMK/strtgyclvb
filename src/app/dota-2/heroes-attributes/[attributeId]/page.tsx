@@ -1,6 +1,6 @@
 import { Footer } from "@/components/shared/footer";
 import { Header } from "@/components/shared/header";
-import { getHeroesAttribute } from "@/features/dota-2/queries/get-heroes-attribute";
+import { HeroesDetailAttributesSection } from "@/features/dota-2/components/sections/heroes-detail-attributes";
 import { HeroesAttributesIdType } from "@/features/dota-2/types/heroes-attributes-id-type";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
 
@@ -12,7 +12,7 @@ export default async function HeroesDetailAttributesPage({
   params,
 }: HeroesAttributesDetailPageProps) {
   const { attributeId } = await params;
-  const data = await getHeroesAttribute(attributeId);
+
   const breadcrumbs: BreadcrumbItemType[] = [
     {
       id: "home",
@@ -42,14 +42,7 @@ export default async function HeroesDetailAttributesPage({
   return (
     <main className="main-container">
       <Header breadcrumbs={breadcrumbs} />
-      <section className="space-y-6 m-6">
-        <h1 className="font-bold">{data?.name}</h1>
-        <div>
-          {data?.descriptions?.map((desc, index) => (
-            <p key={index}>{desc}</p>
-          ))}
-        </div>
-      </section>
+      <HeroesDetailAttributesSection attributeId={attributeId} />
       <Footer />
     </main>
   );

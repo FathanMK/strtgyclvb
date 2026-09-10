@@ -19,14 +19,12 @@ function RightElementSystemStatus({
   switch (true) {
     case value?.toLowerCase().includes("online"):
       return (
-        <div className="animate-pulse flex items-center gap-2 font-bold">
+        <div className="animate-pulse flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-green-500" />
           <p className="text-green-500">ONLINE</p>
         </div>
       );
     default:
-      return (
-        <p className="text-neutral-500 font-bold animate-pulse">UNKNOWN</p>
-      );
+      return <p className="text-neutral-500 animate-pulse">UNKNOWN</p>;
   }
 }

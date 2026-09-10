@@ -11,7 +11,7 @@ export function RightElementContentRenderer({
       return <p>{content.value ?? "UNKNOWN"}</p>;
     case "link":
       return (
-        <Link href={content.href ?? "#"} className="hover-link font-bold">
+        <Link href={content.href ?? "#"} className="hover-link font-black">
           [{content.value}]
         </Link>
       );

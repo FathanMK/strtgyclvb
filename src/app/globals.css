@@ -130,7 +130,7 @@
 }
 
 @utility main-container {
-  @apply max-w-3xl mx-auto;
+  @apply max-w-3xl mx-auto overflow-hidden;
 }
 
 @utility group-hover-link {

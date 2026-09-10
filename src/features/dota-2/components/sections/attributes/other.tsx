@@ -1,13 +1,15 @@
 "use client";
 
+import { Separator } from "@/components/ui/separator";
 import { useAttributesContext } from "@/features/dota-2/context/attributes";
 
 export function OtherAttributesSection() {
   const { attributes } = useAttributesContext();
 
   return (
-    <div className="space-y-3">
-      <h2 className="font-bold">OTHER</h2>
+    <div>
+      <h2>OTHER</h2>
+      <Separator className="my-1" />
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">MOVEMENT SPEED</p>

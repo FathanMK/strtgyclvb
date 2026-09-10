@@ -3,12 +3,14 @@
 import { useAttributesContext } from "@/features/dota-2/context/attributes";
 import { BaseUniversalPopover } from "./popovers/base-universal";
 import { GainUniversalPopover } from "./popovers/gain-universal";
+import { Separator } from "@/components/ui/separator";
 
 export function StatsAttributesSection() {
   const { attributes } = useAttributesContext();
   return (
-    <div className="space-y-3">
-      <h2 className="font-bold">STATS</h2>
+    <div>
+      <h2>STATS</h2>
+      <Separator className="my-1" />
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">BASE STRENGTH</p>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Separator } from "@/components/ui/separator";
 import { HealthPopover } from "./popovers/health";
 import { HealthRegenPopover } from "./popovers/health-regen";
 import { ManaPopover } from "./popovers/mana";
@@ -7,8 +8,9 @@ import { ManaRegenPopover } from "./popovers/mana-regen";
 
 export function RegenerationAttributesSection() {
   return (
-    <div className="space-y-3">
-      <h2 className="font-bold">REGENERATION</h2>
+    <div>
+      <h2>REGENERATION</h2>
+      <Separator className="my-1" />
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">HEALTH</p>

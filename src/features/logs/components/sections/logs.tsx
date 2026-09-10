@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import { getLogs } from "../../queries/get-logs";
 import { RightElementContentRenderer } from "@/components/shared/right-element-content-renderer";
+import { Separator } from "@/components/ui/separator";
 
 export async function LogsSection() {
   const data = await getLogs();
@@ -14,8 +15,9 @@ export async function LogsSection() {
   return (
     <section className="m-6 space-y-6">
       {sortedLogsByCreatedAt.map((item, index) => (
-        <div key={index} className="space-y-2">
-          <h2 className="font-bold">{item[0]}</h2>
+        <div key={index}>
+          <h2 className="font-black">{item[0]}</h2>
+          <Separator className="my-1" />
           <div>
             {item[1]?.map((log) => (
               <div key={log.id} className="flex items-start gap-4">
