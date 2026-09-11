@@ -17,6 +17,12 @@ async function mehcanicsFormulasValue() {
     },
     {
       patchId: "7.41e",
+      mechanicFormulaId: "attack_rate",
+      value: "(base_attack_speed * base_attack_time) / total_attack_speed",
+      valueType: "text",
+    },
+    {
+      patchId: "7.41e",
       mechanicFormulaId: "attack_speed",
       value: "(base_agility * attack_speed_per_agility) + base_attack_speed",
       valueType: "text",
@@ -36,63 +42,63 @@ async function mehcanicsFormulasValue() {
     {
       patchId: "7.41e",
       mechanicFormulaId: "min_damage_strength",
-      value: "base_strength * damage_per_strength + base_min_attack_damage",
+      value: "(base_strength * damage_per_strength) + base_min_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "max_damage_strength",
-      value: "base_strength * damage_per_strength + base_max_attack_damage",
+      value: "(base_strength * damage_per_strength) + base_max_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "min_damage_agility",
-      value: "base_agility * damage_per_agility + base_min_attack_damage",
+      value: "(base_agility * damage_per_agility) + base_min_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "max_damage_agility",
-      value: "base_agililty * damage_per_agility + base_max_attack_damage",
+      value: "(base_agility * damage_per_agility) + base_max_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "min_damage_intelligence",
       value:
-        "base_intelligence * damage_per_intelligence + base_min_attack_damage",
+        "(base_intelligence * damage_per_intelligence) + base_min_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "max_damage_intelligence",
       value:
-        "base_intelligence * damage_per_intelligence + base_max_attack_damage",
+        "(base_intelligence * damage_per_intelligence) + base_max_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "min_damage_universal",
-      value: "base_universal * damage_per_universal + base_min_attack_damage",
+      value: "(base_universal * damage_per_universal) + base_min_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "max_damage_universal",
-      value: "base_universal * damage_per_universal + base_max_attack_damage",
+      value: "(base_universal * damage_per_universal) + base_max_attack_damage",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "health_regen",
-      value: "base_strength * health_regen_per_strength + base_health_regen",
+      value: "(base_strength * health_regen_per_strength) + base_health_regen",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "health",
-      value: "base_strength * health_per_strength + base_hero_health",
+      value: "(base_strength * health_per_strength) + base_hero_health",
       valueType: "text",
     },
     {
@@ -106,13 +112,13 @@ async function mehcanicsFormulasValue() {
       patchId: "7.41e",
       mechanicFormulaId: "mana_regen",
       value:
-        "base_intelligence * mana_regen_per_intelligence + base_mana_regen",
+        "(base_intelligence * mana_regen_per_intelligence) + base_mana_regen",
       valueType: "text",
     },
     {
       patchId: "7.41e",
       mechanicFormulaId: "mana",
-      value: "base_intelligence * mana_per_intelligence + base_hero_mana",
+      value: "(base_intelligence * mana_per_intelligence) + base_hero_mana",
       valueType: "text",
     },
     {
@@ -120,12 +126,6 @@ async function mehcanicsFormulasValue() {
       mechanicFormulaId: "physical_resistance",
       value:
         "1 - (1 - (armor_physical_damage_factor * total_armor) / (1 + armor_physical_damage_factor * total_armor))",
-      valueType: "text",
-    },
-    {
-      patchId: "7.41e",
-      mechanicFormulaId: "attack_rate",
-      value: "base_attack_speed * base_attack_time / total_attack_speed",
       valueType: "text",
     },
     {

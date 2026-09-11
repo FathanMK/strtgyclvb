@@ -97,7 +97,7 @@ export function ArmorPopover() {
           </div>
         </div>
         <Link
-          href="/games/dota-2/attributes/health"
+          href="/dota-2/heroes-attributes/base-armor"
           className="hover-link font-bold w-fit"
         >
           [MORE ABOUT ARMOR]

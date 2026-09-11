@@ -15,7 +15,7 @@ export default async function HeroAttributesPage({ params }: PageParamsType) {
   const mechanicsConstants = getMechanicsConstantsValue();
 
   return (
-    <section className="m-6 space-y-6">
+    <section className="px-6 py-6 space-y-12">
       <AttributesProvider hero={hero} mechanicConstants={mechanicsConstants}>
         <OverviewAttributesSection />
         <RegenerationAttributesSection />

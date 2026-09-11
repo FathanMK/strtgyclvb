@@ -17,17 +17,36 @@ const relations = defineRelations(schemas, (r) => ({
     }),
   },
   dota2MechanicsConstants: {
+    constant: r.one.dota2MechanicsConstantsValue({
+      from: r.dota2MechanicsConstants.mechanicConstantId,
+      to: r.dota2MechanicsConstantsValue.mechanicConstantId,
+    }),
     formulas: r.many.dota2MechanicsFormulas({
       from: r.dota2MechanicsConstants.mechanicConstantId.through(
-        r.dota2MechanicsConstantsToFormulas.mechanicConstantId,
+        r.dota2MechanicsConstantsMechanicsFormulas.mechanicConstantId,
       ),
       to: r.dota2MechanicsFormulas.mechanicFormulaId.through(
-        r.dota2MechanicsConstantsToFormulas.mechanicFormulaId,
+        r.dota2MechanicsConstantsMechanicsFormulas.mechanicFormulaId,
+      ),
+    }),
+  },
+  dota2HeroesAttributes: {
+    formulas: r.many.dota2MechanicsFormulas({
+      from: r.dota2HeroesAttributes.attributeId.through(
+        r.dota2HeroesAttributesMechanicsFormulas.attributeId,
+      ),
+      to: r.dota2MechanicsFormulas.mechanicFormulaId.through(
+        r.dota2HeroesAttributesMechanicsFormulas.mechanicFormulaId,
       ),
     }),
   },
   dota2MechanicsFormulas: {
+    formula: r.one.dota2MechanicsFormulasValue({
+      from: r.dota2MechanicsFormulas.mechanicFormulaId,
+      to: r.dota2MechanicsFormulasValue.mechanicFormulaId,
+    }),
     constants: r.many.dota2MechanicsConstants(),
+    heroesAttributes: r.many.dota2HeroesAttributes(),
   },
 }));
 

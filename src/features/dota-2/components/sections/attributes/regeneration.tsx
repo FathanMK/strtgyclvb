@@ -10,7 +10,7 @@ export function RegenerationAttributesSection() {
   return (
     <div>
       <h2>REGENERATION</h2>
-      <Separator className="my-1" />
+      <Separator className="mb-3 mt-1 bg-neutral-800" />
       <div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">HEALTH</p>

@@ -5,9 +5,9 @@ import { getMechanicsFormulas } from "../../queries/get-mechanics-formulas";
 export async function MechanicsFormulasSection() {
   const mechanicsConstants = await getMechanicsFormulas();
   return (
-    <section className="m-6">
+    <section className="px-6 py-6">
       <h2>MECHANICS FORMULAS</h2>
-      <Separator className="my-1" />
+      <Separator className="mb-3 mt-1 bg-neutral-800" />
       <div>
         {mechanicsConstants.map((item) => (
           <Link

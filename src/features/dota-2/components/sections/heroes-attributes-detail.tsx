@@ -27,17 +27,17 @@ export async function HeroesAttributesDetailSection({
   }));
 
   return (
-    <section className="space-y-6 m-6">
+    <section className="px-6 py-6 space-y-12">
       <div>
         <h1>{data?.name}</h1>
-        <Separator className="my-1" />
+        <Separator className="mb-3 mt-1 bg-neutral-800" />
         <div>
           {data?.descriptions?.map((desc, index) => (
             <p key={index}>{desc}</p>
           ))}
         </div>
       </div>
-      <HeroesAttributesDetailStats />
+      {/* <HeroesAttributesDetailStats /> */}
       <HeroesAttributesDetailTable data={formattedHeroes} columns={columns} />
     </section>
   );

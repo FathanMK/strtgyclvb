@@ -11,11 +11,11 @@ export async function HeroesSection() {
     );
 
   return (
-    <section className="m-6 space-y-6">
+    <section className="px-6 py-6 space-y-12">
       {sortedHeroesByAttributes.map((item, index) => (
         <div key={index}>
           <h2>{item[0]}</h2>
-          <Separator className="my-1" />
+          <Separator className="mb-3 mt-1 bg-neutral-800" />
           <div>
             {item[1]?.map((hero) => (
               <div key={hero.heroId}>

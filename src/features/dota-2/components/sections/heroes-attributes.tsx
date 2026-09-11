@@ -6,9 +6,9 @@ export async function HeroesAttributesSection() {
   const attributes = await getHeroesAttributes();
 
   return (
-    <section className="m-6">
+    <section className="px-6 py-6">
       <h2>HEROES ATTRIBUTES</h2>
-      <Separator className="my-1" />
+      <Separator className="mb-3 mt-1 bg-neutral-800" />
       <div>
         {attributes.map((item) => (
           <Link

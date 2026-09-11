@@ -8,6 +8,11 @@ export const getMechanicConstant = cache(
     const data = await db.query.dota2MechanicsConstants.findFirst({
       with: {
         formulas: true,
+        constant: {
+          columns: {
+            value: true,
+          },
+        },
       },
       where: {
         mechanicConstantId,

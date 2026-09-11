@@ -3,8 +3,8 @@ import { MechanicsConstantsIdType } from "@/features/dota-2/types/mechanics-cons
 import { MechanicsFormulasIdType } from "@/features/dota-2/types/mechanics-formulas-id-type";
 import { pgTable, primaryKey, text } from "drizzle-orm/pg-core";
 
-export const dota2MechanicsConstantsToFormulas = pgTable(
-  "mechanics_constants_to_formulas",
+export const dota2MechanicsConstantsMechanicsFormulas = pgTable(
+  "dota_2_mechanics_constants_mechanics_formulas",
   {
     mechanicConstantId: text("mechanic_constant_id")
       .notNull()
@@ -19,5 +19,5 @@ export const dota2MechanicsConstantsToFormulas = pgTable(
   ],
 );
 
-export type Dota2MechanicsConstantsToFormulasInsertType =
-  typeof dota2MechanicsConstantsToFormulas.$inferInsert;
+export type Dota2MechanicsConstantsMechanicsFormulasInsertType =
+  typeof dota2MechanicsConstantsMechanicsFormulas.$inferInsert;

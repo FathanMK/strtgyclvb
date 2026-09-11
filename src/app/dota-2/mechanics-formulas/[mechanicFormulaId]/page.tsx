@@ -1,7 +1,7 @@
 import { Footer } from "@/components/shared/footer";
 import { Header } from "@/components/shared/header";
-import { MechanicsFormulasDetailSection } from "@/features/dota-2/components/sections/mechanics-formulas-detail";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
+import { MechanicsFormulasDetailSection } from "@/features/dota-2/components/sections/mechanics-formulas-detail";
 
 type MechanicsFormulasDetailPageProps = {
   params: Promise<{ mechanicFormulaId: string }>;

@@ -88,7 +88,7 @@ export function HeroesAttributesDetailTable<TData extends RowData>({
   return (
     <div>
       <h2>TABLE</h2>
-      <Separator className="my-1" />
+      <Separator className="mb-3 mt-1 bg-neutral-800" />
       <Table className="text-base">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

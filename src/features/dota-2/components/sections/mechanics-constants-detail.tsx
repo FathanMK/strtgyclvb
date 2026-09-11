@@ -16,10 +16,10 @@ export async function MechanicsConstantsDetailSection({
   const data = await getMechanicConstant(formattedMechanicConstantId);
 
   return (
-    <section className="space-y-6 m-6">
+    <section className="px-6 py-6 space-y-12">
       <div>
         <h1>{data?.name}</h1>
-        <Separator className="my-1" />
+        <Separator className="mb-3 mt-1 bg-neutral-800" />
         <div>
           {data?.descriptions?.map((desc, index) => (
             <p key={index}>{desc}</p>
@@ -27,8 +27,13 @@ export async function MechanicsConstantsDetailSection({
         </div>
       </div>
       <div>
+        <h2>VALUE</h2>
+        <Separator className="mb-3 mt-1 bg-neutral-800" />
+        <p>{data?.constant?.value}</p>
+      </div>
+      <div>
         <h2>FORMULAS</h2>
-        <Separator className="my-1" />
+        <Separator className="mb-3 mt-1 bg-neutral-800" />
         <div>
           {data?.formulas.map((item) => (
             <Link
