@@ -22,7 +22,7 @@ export function AttackDamagePopover() {
 
   return (
     <Popover modal>
-      <PopoverTrigger className="flex cursor-pointer font-bold hover-link aria-expanded:active-link">
+      <PopoverTrigger className="flex cursor-pointer font-black hover-link aria-expanded:active-link">
         <p>
           {formattedAttackDamageMin} - {formattedAttackDamageMax}
         </p>
@@ -173,7 +173,7 @@ export function AttackDamagePopover() {
         </div>
         <Link
           href="/games/dota-2/attributes/health"
-          className="hover-link font-bold w-fit"
+          className="hover-link font-black w-fit"
         >
           [MORE ABOUT ATTACK DAMAGE]
         </Link>

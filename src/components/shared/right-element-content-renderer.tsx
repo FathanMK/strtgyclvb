@@ -10,8 +10,9 @@ export function RightElementContentRenderer({
     case "text":
       return <p>{content.value ?? "UNKNOWN"}</p>;
     case "link":
+      const href = content.href ?? "#";
       return (
-        <Link href={content.href ?? "#"} className="hover-link font-black">
+        <Link href={href} className="hover-link font-black">
           [{content.value}]
         </Link>
       );

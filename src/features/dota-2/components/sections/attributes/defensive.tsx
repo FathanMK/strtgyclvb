@@ -8,7 +8,7 @@ import { PhysicalResistancePopover } from "./popovers/physical-resistance";
 export function DefensiveAttributesSection() {
   return (
     <div>
-      <h2 className="font-bold">DEFENSIVE</h2>
+      <h2 className="font-black">DEFENSIVE</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
       <div>
         <div className="flex">
@@ -25,15 +25,15 @@ export function DefensiveAttributesSection() {
         </div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">STATUS RESISTANCE</p>
-          <p className="font-bold">0%</p>
+          <p className="font-black">0%</p>
         </div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">SLOW RESISTANCE</p>
-          <p className="font-bold">0%</p>
+          <p className="font-black">0%</p>
         </div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">EVASION RESISTANCE</p>
-          <p className="font-bold">0%</p>
+          <p className="font-black">0%</p>
         </div>
       </div>
     </div>

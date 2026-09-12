@@ -7,11 +7,8 @@ export default function NotFound() {
     <main className="flex flex-col h-screen main-container">
       <Header />
       <section className="p-4 flex-1 flex flex-col gap-2 items-center justify-center">
-        <div className="flex flex-col items-center justify-center">
-          <h1>404</h1>
-          <p>PAGE NOT FOUND</p>
-        </div>
-        <Link href="/" className="hover-link cursor-pointer font-bold">
+        <p>404 - PAGE NOT FOUND</p>
+        <Link href="/" className="hover-link font-black">
           [HOME]
         </Link>
       </section>

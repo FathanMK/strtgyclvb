@@ -18,7 +18,7 @@ export function AttackAnimationPopover() {
 
   return (
     <Popover modal>
-      <PopoverTrigger className="flex cursor-pointer font-bold hover-link aria-expanded:active-link">
+      <PopoverTrigger className="flex cursor-pointer font-black hover-link aria-expanded:active-link">
         <p>
           {base_attack_animation_foreswing.value} +{" "}
           {base_attack_animation_backswing.value}
@@ -55,7 +55,7 @@ export function AttackAnimationPopover() {
         </div>
         <Link
           href="/games/dota-2/attributes/health"
-          className="hover-link font-bold w-fit"
+          className="hover-link font-black w-fit"
         >
           [MORE ABOUT ATTACK ANIMATION]
         </Link>

@@ -51,15 +51,15 @@ export async function MechanicsFormulasDetailSection({
             const formattedId = item.id.replace(/\_/g, "-");
             const href =
               item.type === "constant"
-                ? `mechanics-constants/${formattedId}`
-                : `heroes-attributes/${formattedId}`;
+                ? `/dota-2/mechanics-constants/${formattedId}`
+                : `/dota-2/heroes-attributes/${formattedId}`;
             return (
               <Link
                 key={item.id}
-                href={`/dota-2/${href}`}
-                className="group flex items-center gap-2 w-fit"
+                href={href}
+                className="hover-link font-black block w-fit"
               >
-                <div className="group-hover-link font-bold">[{item.name}]</div>
+                [{item.name}]
               </Link>
             );
           })}

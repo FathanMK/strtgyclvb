@@ -22,7 +22,7 @@ export function LinkedText({
       onPointerLeave={() => setActive("")}
       onPointerDown={() => setActive(id)}
       className={cn(
-        "font-bold w-fit",
+        "font-black w-fit",
         active === id && "bg-neutral-50 text-neutral-950",
       )}
     >

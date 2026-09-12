@@ -18,9 +18,9 @@ export async function LogsSection() {
         <div key={index}>
           <h2 className="font-black">{item[0]}</h2>
           <Separator className="mb-3 mt-1 bg-neutral-800" />
-          <div>
+          <ul>
             {item[1]?.map((log) => (
-              <div key={log.id} className="flex items-start gap-4">
+              <li key={log.id} className="flex items-start gap-4">
                 <p className="basis-1/7">
                   {dayjs(log.createdAt).format("HH:MM:ss")}
                 </p>
@@ -32,9 +32,9 @@ export async function LogsSection() {
                     />
                   ))}
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       ))}
     </section>

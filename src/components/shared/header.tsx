@@ -28,7 +28,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
   const last = inbetween.pop();
 
   return (
-    <header className="px-6 py-6 flex flex-col gap-12">
+    <header className="p-6 flex flex-col gap-12">
       <Link href="/" className="hover-link font-black w-fit">
         [STRTGYCLVB]
       </Link>

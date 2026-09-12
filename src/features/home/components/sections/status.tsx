@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 export async function StatusSection() {
   return (
-    <section className="px-6 py-6">
+    <section className="p-6">
       <h2>STATUS</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
       <div>

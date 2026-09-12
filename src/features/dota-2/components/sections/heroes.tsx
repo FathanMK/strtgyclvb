@@ -17,16 +17,19 @@ export async function HeroesSection() {
           <h2>{item[0]}</h2>
           <Separator className="mb-3 mt-1 bg-neutral-800" />
           <div>
-            {item[1]?.map((hero) => (
-              <div key={hero.heroId}>
-                <Link
-                  href={`/dota-2/heroes/${hero.heroId}/attributes`}
-                  className="hover-link font-bold"
-                >
-                  [{hero.hero?.name}]
-                </Link>
-              </div>
-            ))}
+            {item[1]?.map((hero) => {
+              const href = `/dota-2/heroes/${hero.heroId}/attributes`;
+              return (
+                <div key={hero.heroId}>
+                  <Link
+                    href={href}
+                    className="hover-link font-black block w-fit"
+                  >
+                    [{hero.hero?.name}]
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}

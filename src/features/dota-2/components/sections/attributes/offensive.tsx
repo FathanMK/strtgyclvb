@@ -32,11 +32,11 @@ export function OffensiveAttributesSection() {
         </div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">ATTACK RANGE</p>
-          <p className="font-bold">{attributes.base_attack_range.value}</p>
+          <p className="font-black">{attributes.base_attack_range.value}</p>
         </div>
         <div className="flex">
           <p className="basis-1/2 shrink-0">SPELL AMPLIFICATION</p>
-          <p className="font-bold">0%</p>
+          <p className="font-black">0%</p>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export function TimeBetweenAttacksPopover() {
 
   return (
     <Popover modal>
-      <PopoverTrigger className="flex cursor-pointer font-bold hover-link aria-expanded:active-link">
+      <PopoverTrigger className="flex cursor-pointer font-black hover-link aria-expanded:active-link">
         <p>{formattedTimeBetweenAttacks}s</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
@@ -156,7 +156,7 @@ export function TimeBetweenAttacksPopover() {
         </div>
         <Link
           href="/games/dota-2/attributes/health"
-          className="hover-link font-bold w-fit"
+          className="hover-link font-black w-fit"
         >
           [MORE ABOUT TIME BETWEEN ATTACKS]
         </Link>

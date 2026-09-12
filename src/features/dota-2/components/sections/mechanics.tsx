@@ -1,22 +1,21 @@
 import Link from "next/link";
-import { getHeroesAttributes } from "../../queries/get-heroes-attributes";
 import { Separator } from "@/components/ui/separator";
+import { getMechanics } from "../../queries/get-mechanics";
 
-export async function HeroesAttributesSection() {
-  const attributes = await getHeroesAttributes();
-
+export async function MechanicsSection() {
+  const mechanics = await getMechanics();
   return (
     <section className="px-6 py-6">
-      <h2>HEROES ATTRIBUTES</h2>
+      <h2>MECHANICS</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
       <div>
-        {attributes.map((item) => {
-          const href = `/dota-2/heroes-attributes/${item.attributeId.replace(/\_/g, "-")}`;
+        {mechanics.map((item) => {
+          const href = `/dota-2/mechanics/${item.mechanicId.replace(/\_/g, "-")}`;
           return (
             <Link
               key={item.id}
               href={href}
-              className="hover-link font-black block w-fit"
+              className="hover-link font-black w-fit"
             >
               [{item.name}]
             </Link>

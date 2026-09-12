@@ -28,7 +28,7 @@ export function ArmorPopover() {
 
   return (
     <Popover modal>
-      <PopoverTrigger className="flex cursor-pointer font-bold hover-link aria-expanded:active-link">
+      <PopoverTrigger className="flex cursor-pointer font-black hover-link aria-expanded:active-link">
         <p>{formattedArmor}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
@@ -98,7 +98,7 @@ export function ArmorPopover() {
         </div>
         <Link
           href="/dota-2/heroes-attributes/base-armor"
-          className="hover-link font-bold w-fit"
+          className="hover-link font-black w-fit"
         >
           [MORE ABOUT ARMOR]
         </Link>
