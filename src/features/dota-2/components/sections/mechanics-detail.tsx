@@ -38,53 +38,52 @@ export async function MechanicsDetailSection({
           ))}
         </ul>
       </div>
-      <div>
-        <h2>INTERACTIONS</h2>
-        <Separator className="mb-3 mt-1 bg-neutral-800" />
-        <ul>
-          <li className="flex items-center gap-2">
-            <Link href="#" className="hover-link font-black">
-              [ARMOR REDUCTION]
-            </Link>
-            <MoveRight className="size-4" />
-            <p>REDUCES THE TARGET'S ARMOR</p>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>FORMULAS</h2>
-        <Separator className="mb-3 mt-1 bg-neutral-800" />
+      {mechanic && mechanic.interactions.length > 0 && (
         <div>
-          <Link href="#" className="hover-link font-black">
-            [ARMOR]
-          </Link>
+          <h2>INTERACTIONS</h2>
+          <Separator className="mb-3 mt-1 bg-neutral-800" />
+          <ul>
+            {mechanic.interactions.map((item) => (
+              <li key={item.id} className="flex items-center gap-2">
+                <Link href="#" className="hover-link font-black">
+                  [{item.name}]
+                </Link>
+                <MoveRight className="size-4 shrink-0" />
+                <p className="line-clamp-1">{item.descriptions?.at(0)}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-      <div>
-        <h2>PATCH</h2>
-        <Separator className="mb-3 mt-1 bg-neutral-800" />
-        <ul>
-          <li>
-            <p>
-              - WRITTEN WHEN{" "}
-              <Link href="#" className="hover-link font-black">
-                [7.41e]
-              </Link>{" "}
-              ACTIVE
-            </p>
-          </li>
-        </ul>
-      </div>
+      )}
+      {mechanic && mechanic.formulas.length > 0 && (
+        <div>
+          <h2>FORMULAS</h2>
+          <Separator className="mb-3 mt-1 bg-neutral-800" />
+          <ul>
+            {mechanic?.formulas.map((item) => {
+              const href = `/dota-2/mechanics-formulas/${item.mechanicFormulaId}`;
+              return (
+                <li key={item.id}>
+                  <Link href={href} className="hover-link font-black">
+                    [{item.name}]
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
       <div>
         <h2>SOURCES</h2>
         <Separator className="mb-3 mt-1 bg-neutral-800" />
         <ul>
-          <li>
-            <p>- LIQUIPEDIA DOTA 2 ARMOR SECTION</p>
-          </li>
-          <li>
-            <p>- DOTA 2 IN GAME TEXTS</p>
-          </li>
+          {mechanic?.sources?.map((source, index) => (
+            <li key={index}>
+              <p>
+                <span className="text-neutral-500">&gt;</span> {source}
+              </p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

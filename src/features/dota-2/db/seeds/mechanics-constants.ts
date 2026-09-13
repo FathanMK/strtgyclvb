@@ -1,4 +1,3 @@
-import { logs, LogsInsertType } from "@/db/schemas";
 import {
   dota2MechanicsConstants,
   Dota2MechanicsConstantsInsertType,
@@ -122,31 +121,7 @@ async function mechanicsConstants() {
     },
   ];
 
-  const logsMechanicsConstants: LogsInsertType[] = [
-    {
-      title: "Added Dota 2 mechanic constants",
-      type: "dota-2",
-      content: [
-        {
-          type: "text",
-          value: "Added",
-        },
-        {
-          href: "/games/dota-2",
-          type: "link",
-          value: "Dota 2",
-        },
-        {
-          href: "/games/dota-2/mechanic-constants",
-          type: "link",
-          value: "mechanic constants",
-        },
-      ],
-    },
-  ];
-
   await db.insert(dota2MechanicsConstants).values(mechanicsConstants);
-  await db.insert(logs).values(logsMechanicsConstants);
 
   console.log("ADD MECHANIC CONSTANTS FOR DOTA 2");
   process.exit(0);

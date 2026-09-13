@@ -16,21 +16,21 @@ export async function HeroesSection() {
         <div key={index}>
           <h2>{item[0]}</h2>
           <Separator className="mb-3 mt-1 bg-neutral-800" />
-          <div>
+          <ul>
             {item[1]?.map((hero) => {
               const href = `/dota-2/heroes/${hero.heroId}/attributes`;
               return (
-                <div key={hero.heroId}>
+                <li key={hero.heroId}>
                   <Link
                     href={href}
                     className="hover-link font-black block w-fit"
                   >
                     [{hero.hero?.name}]
                   </Link>
-                </div>
+                </li>
               );
             })}
-          </div>
+          </ul>
         </div>
       ))}
     </section>

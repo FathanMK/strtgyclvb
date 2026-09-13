@@ -11,24 +11,24 @@ export function RegenerationAttributesSection() {
     <div>
       <h2>REGENERATION</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
-        <div className="flex">
+      <ul>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">HEALTH</p>
           <HealthPopover />
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">HEALTH REGENERATION</p>
           <HealthRegenPopover />
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">MANA</p>
           <ManaPopover />
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">MANA REGENERATION</p>
           <ManaRegenPopover />
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }

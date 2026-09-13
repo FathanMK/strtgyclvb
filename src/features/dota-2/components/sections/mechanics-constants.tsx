@@ -8,20 +8,18 @@ export async function MechanicsConstantsSection() {
     <section className="px-6 py-6">
       <h2>MECHANICS CONSTANTS</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
+      <ul>
         {mechanicsConstants.map((item) => {
           const href = `/dota-2/mechanics-constants/${item.mechanicConstantId.replace(/\_/g, "-")}`;
           return (
-            <Link
-              key={item.id}
-              href={href}
-              className="hover-link font-black block w-fit"
-            >
-              [{item.name}]
-            </Link>
+            <li key={item.id}>
+              <Link href={href} className="hover-link font-black block w-fit">
+                [{item.name}]
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 }

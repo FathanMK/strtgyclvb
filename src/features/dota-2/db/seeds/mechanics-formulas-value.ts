@@ -2,8 +2,6 @@ import { getDbAsync } from "@/db";
 import {
   dota2MechanicsFormulasValue,
   Dota2MechanicsFormulasValueInsertType,
-  logs,
-  LogsInsertType,
 } from "@/db/schemas";
 
 async function mehcanicsFormulasValue() {
@@ -136,35 +134,7 @@ async function mehcanicsFormulasValue() {
     },
   ];
 
-  const insertLogsDota2MechanicConstantsValue: LogsInsertType[] = [
-    {
-      title: "Added Dota 2 mechanics formulas value",
-      type: "dota-2",
-      content: [
-        {
-          type: "text",
-          value: "Added",
-        },
-        {
-          href: "/games/dota-2",
-          type: "link",
-          value: "Dota 2",
-        },
-        {
-          href: "/games/dota-2/mechanics-formulas",
-          type: "link",
-          value: "mechanics formulas",
-        },
-        {
-          type: "text",
-          value: "value",
-        },
-      ],
-    },
-  ];
-
   await db.insert(dota2MechanicsFormulasValue).values(mechanicsFormulasValue);
-  await db.insert(logs).values(insertLogsDota2MechanicConstantsValue);
 
   console.log("ADD MECHANICS FORMULAS VALUE FOR DOTA 2");
   process.exit(0);

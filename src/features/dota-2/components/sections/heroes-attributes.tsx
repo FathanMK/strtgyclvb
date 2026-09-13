@@ -9,20 +9,18 @@ export async function HeroesAttributesSection() {
     <section className="px-6 py-6">
       <h2>HEROES ATTRIBUTES</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
+      <ul>
         {attributes.map((item) => {
           const href = `/dota-2/heroes-attributes/${item.attributeId.replace(/\_/g, "-")}`;
           return (
-            <Link
-              key={item.id}
-              href={href}
-              className="hover-link font-black block w-fit"
-            >
-              [{item.name}]
-            </Link>
+            <li key={item.id}>
+              <Link href={href} className="hover-link font-black block w-fit">
+                [{item.name}]
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 }

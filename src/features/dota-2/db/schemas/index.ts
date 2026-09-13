@@ -13,6 +13,8 @@ export * from "./mechanics/mechanics-formulas";
 export * from "./mechanics/mechanics-formulas-value";
 
 export * from "./mechanics/mechanics-constants-mechanics-formulas";
+export * from "./mechanics/mechanics-mechanics-formulas";
 export * from "./heroes/heroes-attributes-mechanics-formulas";
+export * from "./mechanics/mechanics-mechanics";
 
 export * from "./patches/patches";

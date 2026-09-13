@@ -10,32 +10,32 @@ export function DefensiveAttributesSection() {
     <div>
       <h2 className="font-black">DEFENSIVE</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
-        <div className="flex">
+      <ul>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">ARMOR</p>
           <ArmorPopover />
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">PHYSICAL RESISTANCE</p>
           <PhysicalResistancePopover />
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">MAGIC RESISTANCE</p>
           <MagicResistancePopover />
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">STATUS RESISTANCE</p>
           <p className="font-black">0%</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">SLOW RESISTANCE</p>
           <p className="font-black">0%</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">EVASION RESISTANCE</p>
           <p className="font-black">0%</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }

@@ -15,20 +15,20 @@ export function OverviewAttributesSection() {
     <div>
       <h2>OVERVIEW</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
-        <div className="flex">
+      <ul>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">PRIMARY ATTRIBUTE</p>
           <p className="font-black">{attributes.primary_attribute.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">ATTACK TYPE</p>
           <p className="font-black">{attributes.attack_type.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">RELEASE DATE</p>
           <p className="font-black">{formattedReleaseDate}</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }

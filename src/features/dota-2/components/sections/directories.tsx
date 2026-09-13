@@ -6,20 +6,18 @@ export function DirectoriesSection() {
     <section className="px-6 py-6">
       <h2>DIRECTORIES</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
+      <ul>
         {directories.map((item) => {
           const href = `/dota-2/${item.id}`;
           return (
-            <Link
-              key={item.id}
-              href={href}
-              className="hover-link font-black block w-fit"
-            >
-              [{item.name}]
-            </Link>
+            <li key={item.id}>
+              <Link href={href} className="hover-link font-black block w-fit">
+                [{item.name}]
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 }

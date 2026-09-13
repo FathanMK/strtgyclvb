@@ -12,6 +12,7 @@ export const dota2Mechanics = pgTable.withRLS(
     descriptions: text("descriptions").array(),
     category: text("category"),
     rules: text("rules").array(),
+    sources: text("sources").array(),
     createdAt: timestamp("created_at", { withTimezone: true, mode: "string" })
       .defaultNow()
       .notNull(),

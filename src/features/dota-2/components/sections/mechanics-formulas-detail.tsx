@@ -46,7 +46,7 @@ export async function MechanicsFormulasDetailSection({
       <div>
         <h2>CONSTANTS</h2>
         <Separator className="mb-3 mt-1 bg-neutral-800" />
-        <div>
+        <ul>
           {formattedConstants?.map((item) => {
             const formattedId = item.id.replace(/\_/g, "-");
             const href =
@@ -54,16 +54,14 @@ export async function MechanicsFormulasDetailSection({
                 ? `/dota-2/mechanics-constants/${formattedId}`
                 : `/dota-2/heroes-attributes/${formattedId}`;
             return (
-              <Link
-                key={item.id}
-                href={href}
-                className="hover-link font-black block w-fit"
-              >
-                [{item.name}]
-              </Link>
+              <li key={item.id}>
+                <Link href={href} className="hover-link font-black block w-fit">
+                  [{item.name}]
+                </Link>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </section>
   );

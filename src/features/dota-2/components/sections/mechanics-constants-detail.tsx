@@ -34,20 +34,18 @@ export async function MechanicsConstantsDetailSection({
       <div>
         <h2>FORMULAS</h2>
         <Separator className="mb-3 mt-1 bg-neutral-800" />
-        <div>
+        <ul>
           {data?.formulas.map((item) => {
             const href = `/dota-2/mechanics-formulas/${item.mechanicFormulaId.replace(/\_/g, "-")}`;
             return (
-              <Link
-                key={item.id}
-                href={href}
-                className="hover-link font-black block w-fit"
-              >
-                [{item.name}]
-              </Link>
+              <li key={item.id}>
+                <Link href={href} className="hover-link font-black block w-fit">
+                  [{item.name}]
+                </Link>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -7,13 +7,15 @@ import { getHero } from "./get-hero";
 
 export const getMechanic = cache(async (mechanicId: MechanicsIdType) => {
   const db = await getDbAsync();
-  const data = (
-    await db
-      .select()
-      .from(dota2Mechanics)
-      .where(eq(dota2Mechanics.mechanicId, mechanicId))
-      .limit(1)
-  ).at(0);
+  const data = await db.query.dota2Mechanics.findFirst({
+    where: {
+      mechanicId,
+    },
+    with: {
+      formulas: true,
+      interactions: true,
+    },
+  });
 
   return data;
 });

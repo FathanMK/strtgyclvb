@@ -1,4 +1,3 @@
-import { logs, LogsInsertType } from "@/db/schemas";
 import {
   dota2HeroesAttributes,
   Dota2HeroesAttributesInsertType,
@@ -226,31 +225,7 @@ async function heroesAttributes() {
     },
   ];
 
-  const logsHeroesAttributes: LogsInsertType[] = [
-    {
-      title: "Added Dota 2 heroes attributes",
-      type: "dota-2",
-      content: [
-        {
-          type: "text",
-          value: "Added",
-        },
-        {
-          href: "/dota-2",
-          type: "link",
-          value: "Dota 2",
-        },
-        {
-          href: "/dota-2/heroes-attributes",
-          type: "link",
-          value: "Heroes Attributes",
-        },
-      ],
-    },
-  ];
-
   await db.insert(dota2HeroesAttributes).values(heroesAttributes);
-  await db.insert(logs).values(logsHeroesAttributes);
 
   console.log("ADD DOTA 2 HEROES ATTRIBUTES");
   process.exit(0);

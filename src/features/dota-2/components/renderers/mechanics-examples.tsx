@@ -32,9 +32,10 @@ export async function MechanicsExamplesRenderers({
 
       return (
         <p>
-          - {hero.name} has {base_agility.value} Agility and {base_armor.value}{" "}
-          Base Armor <MoveRight className="size-4 inline" /> {formattedArmor}{" "}
-          Armor <MoveRight className="size-4 inline" /> {formattedPhysicalRes}{" "}
+          <span className="text-neutral-500">&gt;</span> {hero.name} has{" "}
+          {base_agility.value} Agility and {base_armor.value} Base Armor{" "}
+          <MoveRight className="size-4 inline" /> {formattedArmor} Armor{" "}
+          <MoveRight className="size-4 inline" /> {formattedPhysicalRes}{" "}
           Physical Resistance
         </p>
       );

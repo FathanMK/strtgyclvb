@@ -11,44 +11,44 @@ export function StatsAttributesSection() {
     <div>
       <h2>STATS</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
-        <div className="flex">
+      <ul>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">BASE STRENGTH</p>
           <p className="font-black">{attributes.base_strength.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">GAIN STRENGTH</p>
           <p className="font-black">{attributes.gain_strength.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">BASE AGILITY</p>
           <p className="font-black">{attributes.base_agility.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">GAIN AGILITY</p>
           <p className="font-black">{attributes.gain_agility.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">BASE INTELLIGENCE</p>
           <p className="font-black">{attributes.base_intelligence.value}</p>
-        </div>
-        <div className="flex">
+        </li>
+        <li className="flex">
           <p className="basis-1/2 shrink-0">GAIN INTELLIGENCE</p>
           <p className="font-black">{attributes.gain_intelligence.value}</p>
-        </div>
+        </li>
         {attributes.primary_attribute.value === "universal" && (
           <>
-            <div className="flex">
+            <li className="flex">
               <p className="basis-1/2 shrink-0">BASE UNIVERSAL</p>
               <BaseUniversalPopover />
-            </div>
-            <div className="flex">
+            </li>
+            <li className="flex">
               <p className="basis-1/2 shrink-0">GAIN UNIVERSAL</p>
               <GainUniversalPopover />
-            </div>
+            </li>
           </>
         )}
-      </div>
+      </ul>
     </div>
   );
 }
