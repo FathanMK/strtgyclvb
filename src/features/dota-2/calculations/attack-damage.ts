@@ -1,10 +1,10 @@
 import { GetHeroDataType } from "../types/get-hero-data-type";
-import { GetMechanicConstantsDataType } from "../types/get-mechanics-constants-data-type";
+import { GetMechanicsConstantsValueDataType } from "../types/get-mechanics-constants-value-data-type";
 import { calculateUniversal } from "./universal";
 
 export function calculateAttackDamage(
   attributes: GetHeroDataType["attributes"],
-  mechanicConstants: GetMechanicConstantsDataType,
+  mechanicConstants: GetMechanicsConstantsValueDataType,
 ) {
   const {
     primary_attribute,

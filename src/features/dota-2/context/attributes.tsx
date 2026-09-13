@@ -2,11 +2,11 @@
 
 import { createContext, ReactNode, use, useContext } from "react";
 import { GetHeroDataType } from "../types/get-hero-data-type";
-import { GetMechanicConstantsDataType } from "../types/get-mechanics-constants-data-type";
+import { GetMechanicsConstantsValueDataType } from "../types/get-mechanics-constants-value-data-type";
 
 type AttributesContextType = {
   attributes: GetHeroDataType["attributes"];
-  mechanicConstants: GetMechanicConstantsDataType;
+  mechanicConstants: GetMechanicsConstantsValueDataType;
 };
 
 const AttributesContext = createContext<AttributesContextType | undefined>(
@@ -15,7 +15,7 @@ const AttributesContext = createContext<AttributesContextType | undefined>(
 
 type AttributesProviderType = {
   hero: Promise<GetHeroDataType>;
-  mechanicConstants: Promise<GetMechanicConstantsDataType>;
+  mechanicConstants: Promise<GetMechanicsConstantsValueDataType>;
   children?: ReactNode;
 };
 

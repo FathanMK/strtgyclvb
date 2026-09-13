@@ -8,10 +8,12 @@ async function mechanics() {
       mechanicId: "armor",
       name: "Armor",
       descriptions: [
-        "Armor is a stat that reduces (or increases, if negative) physical damage a unit takes from abilities and attacks.",
-        "Every unit is capable of gaining or losing armor, and most units start with a small amount of base armor, some even starting with negative armor.",
-        "A hero's armor can be passively increased with Agility via leveling up, certain items, talents and some abilities.",
-        "Armor of any unit can also be temporarily increased or reduced with some abilities.",
+        "A stat that reduces (or increases, if negative) physical damage a unit takes from abilities and attacks.",
+      ],
+      rules: [
+        "Armor can have negative value",
+        "Negative armor increase the physical damage taken",
+        "Armor only modifies damage affected by physical resistance",
       ],
       category: "defensive",
     },

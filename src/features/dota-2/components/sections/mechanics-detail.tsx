@@ -3,6 +3,7 @@ import { MechanicsIdType } from "../../types/mechanics-id-type";
 import { getMechanic } from "../../queries/get-mechanic";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
+import { MechanicsDetailExamples } from "../others/mehcanics-detail-examples";
 
 export async function MechanicsDetailSection({
   mechanicId,
@@ -23,36 +24,18 @@ export async function MechanicsDetailSection({
           ))}
         </div>
       </div>
-      <div>
-        <h2>EXAMPLES</h2>
-        <Separator className="mb-3 mt-1 bg-neutral-800" />
-        <ul>
-          <li>
-            <p>
-              - Abaddon has 22 Agility and -1 Base Armor{" "}
-              <MoveRight className="size-4 inline" /> 2.67 Armor{" "}
-              <MoveRight className="size-4 inline" /> 13.83% Physical Resistance
-            </p>
-            <p>
-              - with 13.83% Physical Resistance and 50 Physical Damage{" "}
-              <MoveRight className="size-4 inline" /> 43.1 Damage Taken
-            </p>
-          </li>
-        </ul>
-      </div>
+      <MechanicsDetailExamples mechanicId={formattedMechanicId} />
       <div>
         <h2>RULES</h2>
         <Separator className="mb-3 mt-1 bg-neutral-800" />
         <ul>
-          <li>
-            <p>- Armor can have negative value</p>
-          </li>
-          <li>
-            <p>- Negative armor increase the physical damage taken</p>
-          </li>
-          <li>
-            <p>- Armor only modifies damage affected by physical resistance</p>
-          </li>
+          {mechanic?.rules?.map((rule, index) => (
+            <li key={index}>
+              <p>
+                <span className="text-neutral-500">&gt;</span> {rule}
+              </p>
+            </li>
+          ))}
         </ul>
       </div>
       <div>
@@ -100,7 +83,7 @@ export async function MechanicsDetailSection({
             <p>- LIQUIPEDIA DOTA 2 ARMOR SECTION</p>
           </li>
           <li>
-            <p>- DOTA 2 IN GAME TEXT</p>
+            <p>- DOTA 2 IN GAME TEXTS</p>
           </li>
         </ul>
       </div>

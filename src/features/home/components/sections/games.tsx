@@ -6,20 +6,18 @@ export async function GamesSection() {
     <section className="p-6">
       <h2>GAMES</h2>
       <Separator className="mb-3 mt-1 bg-neutral-800" />
-      <div>
+      <ul>
         {games.map((game) => {
           const href = `/${game.gameId}`;
           return (
-            <Link
-              key={game.id}
-              href={href}
-              className="hover-link font-black block w-fit"
-            >
-              [{game.name}]
-            </Link>
+            <li key={game.id}>
+              <Link href={href} className="hover-link font-black block w-fit">
+                [{game.name}]
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 }
