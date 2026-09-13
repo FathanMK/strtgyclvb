@@ -16,6 +16,56 @@ const relations = defineRelations(schemas, (r) => ({
       to: r.dota2HeroesAttributes.attributeId,
     }),
   },
+  dota2MechanicsConstants: {
+    constant: r.one.dota2MechanicsConstantsValue({
+      from: r.dota2MechanicsConstants.mechanicConstantId,
+      to: r.dota2MechanicsConstantsValue.mechanicConstantId,
+    }),
+    formulas: r.many.dota2MechanicsFormulas({
+      from: r.dota2MechanicsConstants.mechanicConstantId.through(
+        r.dota2MechanicsConstantsMechanicsFormulas.mechanicConstantId,
+      ),
+      to: r.dota2MechanicsFormulas.mechanicFormulaId.through(
+        r.dota2MechanicsConstantsMechanicsFormulas.mechanicFormulaId,
+      ),
+    }),
+  },
+  dota2HeroesAttributes: {
+    formulas: r.many.dota2MechanicsFormulas({
+      from: r.dota2HeroesAttributes.attributeId.through(
+        r.dota2HeroesAttributesMechanicsFormulas.attributeId,
+      ),
+      to: r.dota2MechanicsFormulas.mechanicFormulaId.through(
+        r.dota2HeroesAttributesMechanicsFormulas.mechanicFormulaId,
+      ),
+    }),
+  },
+  dota2Mechanics: {
+    interactions: r.many.dota2Mechanics({
+      from: r.dota2Mechanics.mechanicId.through(
+        r.dota2MechanicsMechanics.mechanicId,
+      ),
+      to: r.dota2Mechanics.mechanicId.through(
+        r.dota2MechanicsMechanics.secondMechanicId,
+      ),
+    }),
+    formulas: r.many.dota2MechanicsFormulas({
+      from: r.dota2Mechanics.mechanicId.through(
+        r.dota2MechanicsMechanicsFormulas.mechanicId,
+      ),
+      to: r.dota2MechanicsFormulas.mechanicFormulaId.through(
+        r.dota2MechanicsMechanicsFormulas.mechanicFormulaId,
+      ),
+    }),
+  },
+  dota2MechanicsFormulas: {
+    formula: r.one.dota2MechanicsFormulasValue({
+      from: r.dota2MechanicsFormulas.mechanicFormulaId,
+      to: r.dota2MechanicsFormulasValue.mechanicFormulaId,
+    }),
+    constants: r.many.dota2MechanicsConstants(),
+    heroesAttributes: r.many.dota2HeroesAttributes(),
+  },
 }));
 
 export default relations;

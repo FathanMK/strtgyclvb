@@ -1,7 +1,6 @@
 import { Footer } from "@/components/shared/footer";
 import { Header } from "@/components/shared/header";
 import { HeroesSection } from "@/features/dota-2/components/sections/heroes";
-import { StatusSection } from "@/features/dota-2/components/sections/status";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
 
 export default function Dota2HeroesPage() {
@@ -9,7 +8,6 @@ export default function Dota2HeroesPage() {
     <main className="main-container">
       <Header breadcrumbs={breadcrumbs} />
       <HeroesSection />
-      <StatusSection />
       <Footer />
     </main>
   );

@@ -17,6 +17,7 @@ import {
 import { Button } from "../ui/button";
 import { Fragment } from "react/jsx-runtime";
 import { BreadcrumbItemType } from "@/types/breadcrumb-item-type";
+import { ChevronRight } from "lucide-react";
 
 type HeaderProps = {
   breadcrumbs?: BreadcrumbItemType[];
@@ -27,8 +28,8 @@ export function Header({ breadcrumbs }: HeaderProps) {
   const last = inbetween.pop();
 
   return (
-    <header className="m-6 flex flex-col gap-6">
-      <Link href="/" className="hover-link uppercase font-bold text-lg w-fit">
+    <header className="p-6 flex flex-col gap-12">
+      <Link href="/" className="hover-link font-black w-fit">
         [STRTGYCLVB]
       </Link>
       {breadcrumbs && (
@@ -41,7 +42,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                   render={
                     <Link
                       href={first.href ?? "#"}
-                      className="hover-link uppercase font-bold"
+                      className="hover-link font-black"
                     >
                       [{first.value}]
                     </Link>
@@ -57,26 +58,28 @@ export function Header({ breadcrumbs }: HeaderProps) {
                     render={
                       <Button
                         variant="ghost"
-                        className="cursor-pointer h-auto transition-none text-base p-0 border-none font-bold dark:hover:bg-neutral-50 dark:hover:text-neutral-950 dark:aria-expanded:bg-neutral-50 dark:aria-expanded:text-neutral-950"
+                        className="cursor-pointer h-auto transition-none text-base p-0 border-none font-black dark:hover:bg-neutral-50 dark:hover:text-neutral-950 dark:aria-expanded:bg-neutral-50 dark:aria-expanded:text-neutral-950"
                       >
                         [...]
                       </Button>
                     }
                   />
                   <DropdownMenuContent className="min-w-0 w-fit" align="start">
-                    <DropdownMenuGroup>
-                      {inbetween.map((item) => (
-                        <DropdownMenuItem
-                          key={item.id}
-                          className="text-sm not-data-[variant=destructive]:focus:**:text- focus:bg- shrink-0"
-                        >
-                          <Link
-                            href={item.href ?? "#"}
-                            className="hover-link uppercase font-bold shrink-0"
-                          >
-                            [{item.value}]
-                          </Link>
-                        </DropdownMenuItem>
+                    <DropdownMenuGroup className="flex items-center">
+                      {inbetween.map((item, index) => (
+                        <Fragment key={item.id}>
+                          <DropdownMenuItem className="text-sm not-data-[variant=destructive]:focus:**:text- focus:bg- shrink-0">
+                            <Link
+                              href={item.href ?? "#"}
+                              className="hover-link font-black shrink-0"
+                            >
+                              [{item.value}]
+                            </Link>
+                          </DropdownMenuItem>
+                          {index + 1 !== inbetween.length && (
+                            <ChevronRight className="size-3.5" />
+                          )}
+                        </Fragment>
                       ))}
                     </DropdownMenuGroup>
                   </DropdownMenuContent>
@@ -90,7 +93,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                 render={
                   <Link
                     href={last.href ?? "#"}
-                    className="active-link uppercase font-bold"
+                    className="active-link font-black"
                   >
                     [{last.value}]
                   </Link>
@@ -107,14 +110,14 @@ export function Header({ breadcrumbs }: HeaderProps) {
                         render={
                           <Link
                             href={bc.href ?? ""}
-                            className="hover-link uppercase font-bold"
+                            className="hover-link font-black"
                           >
                             [{bc.value}]
                           </Link>
                         }
                       />
                     ) : (
-                      <BreadcrumbPage className="active-link uppercase font-bold">
+                      <BreadcrumbPage className="active-link font-black">
                         [{bc.value}]
                       </BreadcrumbPage>
                     )}

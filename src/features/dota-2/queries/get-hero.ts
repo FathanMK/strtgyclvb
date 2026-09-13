@@ -8,6 +8,7 @@ import {
 import { desc, eq } from "drizzle-orm";
 import { getDbAsync } from "@/db";
 import { HeroesAttributesIdType } from "../types/heroes-attributes-id-type";
+import { HeroAttributeType } from "../types/hero-attribute-type";
 
 export const getHero = cache(async (heroId: string) => {
   const db = await getDbAsync();
@@ -57,11 +58,3 @@ export const getHero = cache(async (heroId: string) => {
 
   return data;
 });
-
-type HeroAttributeType = {
-  attributeId: string;
-  name: string;
-  valueType: string;
-  value: string;
-  category: string;
-};

@@ -28,11 +28,11 @@ export function HealthPopover() {
 
   return (
     <Popover modal>
-      <PopoverTrigger className="flex cursor-pointer font-bold hover-link aria-expanded:active-link">
+      <PopoverTrigger className="flex cursor-pointer font-black hover-link aria-expanded:active-link">
         <p>{formattedHealth}</p>
         <span className="text-[10px]">[?]</span>
       </PopoverTrigger>
-      <PopoverContent align="start" className="text-sm uppercase gap-6">
+      <PopoverContent align="start" className="text-sm gap-6">
         <div>
           <LinkedText id="health" active={active} setActive={setActive}>
             {formattedHealth}
@@ -98,7 +98,7 @@ export function HealthPopover() {
         </div>
         <Link
           href="/games/dota-2/attributes/health"
-          className="hover-link font-bold w-fit"
+          className="hover-link font-black w-fit"
         >
           [MORE ABOUT HEALTH]
         </Link>

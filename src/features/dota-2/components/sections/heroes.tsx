@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { getHeroes } from "../../queries/get-heroes";
+import { Separator } from "@/components/ui/separator";
+import { getHeroesByAttribute } from "../../queries/get-heroes-by-attribute";
 
 export async function HeroesSection() {
-  const data = await getHeroes();
+  const data = await getHeroesByAttribute("primary_attribute");
   const sortedHeroesByAttributes =
     data &&
     Object.entries(
@@ -10,23 +11,26 @@ export async function HeroesSection() {
     );
 
   return (
-    <section className="m-6 space-y-6 uppercase">
+    <section className="px-6 py-6 space-y-12">
       {sortedHeroesByAttributes.map((item, index) => (
-        <div key={index} className="space-y-2">
-          <h2 className="uppercase font-bold text-lg">{item[0]}</h2>
-          <div className="flex flex-wrap gap-x-6 gap-y-11">
-            {item[1]?.map((hero, index) => (
-              <div key={hero.heroId} className="flex items-center gap-2">
-                <p>{index?.toString().padStart(2, "0")}</p>
-                <Link
-                  href={`/dota-2/heroes/${hero.heroId}/attributes`}
-                  className="hover-link font-bold"
-                >
-                  [{hero.hero?.name}]
-                </Link>
-              </div>
-            ))}
-          </div>
+        <div key={index}>
+          <h2>{item[0]}</h2>
+          <Separator className="mb-3 mt-1 bg-neutral-800" />
+          <ul>
+            {item[1]?.map((hero) => {
+              const href = `/dota-2/heroes/${hero.heroId}/attributes`;
+              return (
+                <li key={hero.heroId}>
+                  <Link
+                    href={href}
+                    className="hover-link font-black block w-fit"
+                  >
+                    [{hero.hero?.name}]
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       ))}
     </section>

@@ -1,6 +1,5 @@
 import { getDbAsync } from "@/db";
 import { dota2Heroes, Dota2HeroesInsertType } from "../schemas";
-import { logs, LogsInsertType } from "@/db/schemas";
 
 async function heroes() {
   const db = await getDbAsync();
@@ -15,35 +14,7 @@ async function heroes() {
     },
   ];
 
-  const logsHeroes: LogsInsertType[] = [
-    {
-      title: "Add Dota 2 hero Abaddon",
-      type: "dota-2",
-      content: [
-        {
-          type: "text",
-          value: "ADD",
-        },
-        {
-          href: "/dota-2",
-          type: "link",
-          value: "DOTA 2",
-        },
-        {
-          href: "/dota-2/heroes/abaddon",
-          type: "link",
-          value: "ABADDON",
-        },
-        {
-          type: "text",
-          value: "HERO",
-        },
-      ],
-    },
-  ];
-
   await db.insert(dota2Heroes).values(heroes);
-  await db.insert(logs).values(logsHeroes);
 
   console.log("ADD ABADDON HERO");
   process.exit(0);

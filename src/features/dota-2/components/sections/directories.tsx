@@ -1,21 +1,23 @@
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 export function DirectoriesSection() {
   return (
-    <section className="m-6 space-y-2">
-      <h2 className="font-bold text-lg">DIRECTORIES</h2>
-      <div className="flex flex-wrap gap-x-6 gap-y-1 flex-col sm:flex-row uppercase">
-        {directories.map((item, index) => (
-          <Link
-            key={item.id}
-            href={`/dota-2/${item.id}`}
-            className="group flex items-center gap-2"
-          >
-            <p>{index?.toString().padStart(2, "0")}</p>
-            <div className="group-hover-link font-bold">[{item.name}]</div>
-          </Link>
-        ))}
-      </div>
+    <section className="px-6 py-6">
+      <h2>DIRECTORIES</h2>
+      <Separator className="mb-3 mt-1 bg-neutral-800" />
+      <ul>
+        {directories.map((item) => {
+          const href = `/dota-2/${item.id}`;
+          return (
+            <li key={item.id}>
+              <Link href={href} className="hover-link font-black block w-fit">
+                [{item.name}]
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }
@@ -28,5 +30,17 @@ const directories = [
   {
     id: "heroes-attributes",
     name: "HEROES ATTRIBUTES",
+  },
+  {
+    id: "mechanics",
+    name: "MECHANICS",
+  },
+  {
+    id: "mechanics-constants",
+    name: "MECHANICS CONSTANTS",
+  },
+  {
+    id: "mechanics-formulas",
+    name: "MECHANICS FORMULAS",
   },
 ];
