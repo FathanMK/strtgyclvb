@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# STRTGYCLVB
 
-## Getting Started
+## What is STRTGYCLVB?
 
-First, run the development server:
+STRTGYCLVB started because I'm obsessed with understanding how games actually work.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Not just what an ability does, but why it works that way, what mechanics are involved, what rules it follows, what exceptions it has, and how everything connects.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Most of that information is scattered around, so I started taking it apart and organizing it in a way that makes sense to me.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+That's basically STRTGYCLVB.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I'm building it for myself first. I want something I can use to explore a game, mess around with its data, and answer my own questions.
 
-## Learn More
+I'm just making it public because maybe someone else will find it useful too.
 
-To learn more about Next.js, take a look at the following resources:
+## Why Dota 2?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dota is the first game I'm doing this with because, well, it's Dota.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Heroes, abilities, mechanics, formulas, constants, weird interactions, weird exceptions, patches that change everything — there's a lot to take apart.
 
-## Deploy on Vercel
+Instead of keeping all of those as separate pieces of information, I'm trying to connect them. A mechanic can have rules and examples, formulas can depend on constants, heroes can relate to mechanics, and everything can change between patches.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Basically, I'm trying to map out how the game works.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Where is this going?
+
+I don't really know yet.
+
+Once the data is structured, I can build whatever I want on top of it — tools, calculations, visualizations, AI, or something I haven't thought of yet.
+
+Right now, I'm just building something I want to use and seeing where it goes.
+
+Maybe it becomes a product someday.
+
+For now, I just want to keep taking Dota apart.
