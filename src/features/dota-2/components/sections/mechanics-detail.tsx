@@ -45,7 +45,7 @@ export async function MechanicsDetailSection({
           <ul>
             {mechanic.interactions.map((item) => (
               <li key={item.id} className="flex items-center gap-2">
-                <Link href="#" className="hover-link font-black">
+                <Link href="#" className="hover-link font-black shrink-0">
                   [{item.name}]
                 </Link>
                 <MoveRight className="size-4 shrink-0" />

@@ -1,1 +1,1 @@
-export type MechanicsIdType = "armor" | "armor_reduction";
+export type MechanicsIdType = "armor" | "armor_reduction" | "effective_hp";

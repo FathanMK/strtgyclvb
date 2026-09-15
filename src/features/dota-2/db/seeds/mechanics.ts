@@ -18,17 +18,31 @@ async function mechanics() {
     //   sources: ["LIQUIPEDIA DOTA 2 ARMOR SECTION", "DOTA 2 IN GAME TEXTS"],
     //   category: "defensive",
     // },
+    // {
+    //   mechanicId: "armor_reduction",
+    //   name: "Armor Reduction",
+    //   descriptions: ["Lowers target armor, increasing physical damage taken."],
+    //   rules: [
+    //     "Stacks from different sources; identical modifiers usually do not stack.",
+    //     "Armor can go below zero, amplifying damage beyond 100%.",
+    //     "Affects physical damage only (ignores magical and pure damage).",
+    //   ],
+    //   sources: ["LIQUIPEDIA DOTA 2 ARMOR SECTION", "DOTA 2 IN GAME TEXTS"],
+    //   category: "offensive",
+    // },
     {
-      mechanicId: "armor_reduction",
-      name: "Armor Reduction",
-      descriptions: ["Lowers target armor, increasing physical damage taken."],
+      mechanicId: "effective_hp",
+      name: "Effective HP",
+      descriptions: [
+        "Measures how much raw physical damage a unit can take based on their current health pool and total armor.",
+      ],
       rules: [
-        "Stacks from different sources; identical modifiers usually do not stack.",
-        "Armor can go below zero, amplifying damage beyond 100%.",
-        "Affects physical damage only (ignores magical and pure damage).",
+        "Each point of armor increases physical EHP by 6% of the unit's maximum HP.",
+        "Physical damage resistance percent scales non-linearly, but physical EHP scales linearly per point of armor.",
+        "Maximizing EHP requires balancing bonus armor items with raw HP items.",
       ],
       sources: ["LIQUIPEDIA DOTA 2 ARMOR SECTION", "DOTA 2 IN GAME TEXTS"],
-      category: "offensive",
+      category: "defensive",
     },
   ];
 

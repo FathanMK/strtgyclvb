@@ -7,9 +7,21 @@ import {
 async function mechanicsMechanics() {
   const db = await getDbAsync();
   const mechanicsMechanics: Dota2MechanicsMechanicsInsertType[] = [
+    // {
+    //   mechanicId: "armor",
+    //   secondMechanicId: "armor_reduction",
+    // },
+    {
+      mechanicId: "armor_reduction",
+      secondMechanicId: "armor",
+    },
     {
       mechanicId: "armor",
-      secondMechanicId: "armor_reduction",
+      secondMechanicId: "effective_hp",
+    },
+    {
+      mechanicId: "effective_hp",
+      secondMechanicId: "armor",
     },
   ];
 
